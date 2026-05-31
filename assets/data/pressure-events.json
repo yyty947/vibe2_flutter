@@ -1,0 +1,56 @@
+[
+  {
+    "id": "PRESSURE_HR_CHECK",
+    "title": "HR 突然巡查",
+    "description": "你刚坐下打开电脑，HR 就从你工位旁边走过，意味深长地看了你一眼。你感觉今天做什么都会被人盯着。",
+    "effects": { "energy": -10, "suspicion": 5 },
+    "log": "[ALERT] HR 在你的工位附近逗留了好一阵。你如坐针毡，精力被焦虑消耗了不少。",
+    "minSuspicion": 75,
+    "weight": 100
+  },
+  {
+    "id": "PRESSURE_PIP_RUMOR",
+    "title": "PIP 传闻",
+    "description": "茶水间里流传着一个消息：HR 正在拟定新一轮的 PIP（绩效改进计划）名单。你的名字被提到了。",
+    "effects": { "energy": -15, "kpi": -5, "suspicion": 10 },
+    "log": "[ALERT] PIP 的阴云笼罩着你。你知道进了 PIP 就等于半只脚踏出了公司，焦虑让你今天效率大降。",
+    "minSuspicion": 80,
+    "weight": 80
+  },
+  {
+    "id": "PRESSURE_LEADER_COLD",
+    "title": "Leader 态度变冷",
+    "description": "你今天跟 Leader 打招呼，他只点了点头，没有像往常一样回应。你开始怀疑自己是不是已经在'那个名单'上了。",
+    "effects": { "energy": -10, "kpi": -5 },
+    "log": "[WARNING] Leader 的冷淡让你心神不宁，你今天写代码时总在想是不是该更新简历了。",
+    "minSuspicion": 70,
+    "weight": 100
+  },
+  {
+    "id": "PRESSURE_DESK_CHECK",
+    "title": "工位被动了",
+    "description": "你发现工位上的东西被人动过了——抽屉半开，笔记本的位置也不对。是保洁还是 HR 在查你的'离职准备度'？",
+    "effects": { "energy": -10, "suspicion": 5, "interview": 5 },
+    "log": "[WARNING] 工位被翻的恐惧让你更加坚定了找下家的决心。面试准备度微升，但精神更紧张了。",
+    "minSuspicion": 80,
+    "weight": 70
+  },
+  {
+    "id": "PRESSURE_MEETING_SKIP",
+    "title": "被排除在会议外",
+    "description": "你发现组里的核心会议不再邀请你了。以前你都会收到飞书会议链接，今天却没有。",
+    "effects": { "energy": -10, "kpi": -10, "suspicion": 5 },
+    "log": "[ALERT] 你被排除在核心讨论之外。这通常是裁员前的信号——先让你和信息流脱节。",
+    "minSuspicion": 85,
+    "weight": 60
+  },
+  {
+    "id": "PRESSURE_BADGE_ISSUE",
+    "title": "门禁异常",
+    "description": "今早刷工卡时门禁响了两次才开。你站在门口，突然想到——被裁的人门禁权限会在前一天晚上被注销。",
+    "effects": { "energy": -15, "suspicion": 5 },
+    "log": "[ALERT] 门禁的异常让你心慌了一上午。虽然最后确认只是系统故障，但那种恐惧是真实的。",
+    "minSuspicion": 70,
+    "weight": 90
+  }
+]

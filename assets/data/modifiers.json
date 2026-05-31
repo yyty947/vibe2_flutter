@@ -1,0 +1,99 @@
+[
+  {
+    "id": "MOD_BOSS_AWAY",
+    "label": "老板出差",
+    "description": "老板今天去参加行业峰会了，办公室里气氛松弛了不少。",
+    "effects": { "suspicionMultiplier": 0.5 },
+    "minDay": 1,
+    "weight": 100
+  },
+  {
+    "id": "MOD_DOUBLE_KPI",
+    "label": "双倍绩效日",
+    "description": "今天所有交付成果都会被总监直接过目，干活的回报翻倍。",
+    "effects": { "kpiMultiplier": 2.0 },
+    "minDay": 1,
+    "weight": 80
+  },
+  {
+    "id": "MOD_CRUNCH_TIME",
+    "label": "全员冲刺",
+    "description": "版本封版倒计时，整个部门灯都没关。干活更累但绩效更高。",
+    "effects": { "energyMultiplier": 1.5, "kpiMultiplier": 1.5 },
+    "minDay": 5,
+    "weight": 70
+  },
+  {
+    "id": "MOD_SLACK_DAY",
+    "label": "摸鱼好日子",
+    "description": "周五下午，一半的人都'去开会了'。带薪拉屎的收益翻倍。",
+    "effects": { "slackEnergyBoost": 10 },
+    "minDay": 1,
+    "weight": 90
+  },
+  {
+    "id": "MOD_HR_PATROL",
+    "label": "HR 巡视",
+    "description": "HR 今天在楼层里频繁走动，所有人的屏幕都被瞄了好几眼。",
+    "effects": { "suspicionMultiplier": 2.0 },
+    "minDay": 10,
+    "weight": 60
+  },
+  {
+    "id": "MOD_EXHAUSTED",
+    "label": "身心俱疲",
+    "description": "昨晚没睡好，今天所有行动消耗的精力都更多。",
+    "effects": { "energyMultiplier": 1.5 },
+    "minDay": 3,
+    "weight": 70
+  },
+  {
+    "id": "MOD_STUDY_BOOST",
+    "label": "技术分享日",
+    "description": "今天部门安排了技术分享，大家光明正大地刷题看文档。",
+    "effects": { "interviewMultiplier": 2.0 },
+    "minDay": 1,
+    "weight": 80
+  },
+  {
+    "id": "MOD_RUMOR_MILL",
+    "label": "谣言四起",
+    "description": "茶水间流传着第三轮裁员的名单，人心惶惶。摸鱼行为的怀疑度翻倍。",
+    "effects": { "suspicionMultiplier": 1.5, "slackSuspicionBoost": 5 },
+    "minDay": 8,
+    "weight": 70
+  },
+  {
+    "id": "MOD_MENTOR_AROUND",
+    "label": "导师在场",
+    "description": "你的 Tech Lead 今天心情不错，主动提出帮你 Review 代码。",
+    "effects": { "kpiMultiplier": 1.5, "energyMultiplier": 0.8 },
+    "minDay": 1,
+    "maxDay": 20,
+    "weight": 60
+  },
+  {
+    "id": "MOD_HEADHUNTER",
+    "label": "猎头活跃",
+    "description": "不知道什么原因，今天猎头的电话特别多。刷面试题的效率翻倍。",
+    "effects": { "interviewMultiplier": 1.5 },
+    "minDay": 10,
+    "weight": 90
+  },
+  {
+    "id": "MOD_BURNED_OUT",
+    "label": "心力交瘁",
+    "description": "连续的高压让你几乎喘不过气。今天的结算精力扣减翻倍。",
+    "effects": { "settlementDrainBonus": 5 },
+    "minDay": 15,
+    "weight": 60
+  },
+  {
+    "id": "MOD_EASY_FRIDAY",
+    "label": "轻松周五",
+    "description": "周五了，大家都提前下班。精力消耗减半，但干活的绩效也打折。",
+    "effects": { "energyMultiplier": 0.5, "kpiMultiplier": 0.7 },
+    "minDay": 1,
+    "weight": 80
+  }
+]

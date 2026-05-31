@@ -1,0 +1,2440 @@
+[
+  {
+    "id": "EV_001",
+    "title": "五彩斑斓的黑",
+    "description": "产品经理走到你工位旁，要求给刚上线的一期需求加上'五彩斑斓的黑'主题切换，且下班前必须上预发环境。",
+    "weight": 100,
+    "condition": null,
+    "options": [
+      {
+        "text": "A. 默默接下（通宵干活）",
+        "effects": [
+          {
+            "type": "ENERGY",
+            "value": -15
+          },
+          {
+            "type": "KPI",
+            "value": 10
+          },
+          {
+            "type": "SUSPICION",
+            "value": -5
+          }
+        ],
+        "log": "[WARNING] 你咬牙切齿地写了 500 行 CSS，精力大幅下降，但老板对你的服从度很满意。"
+      },
+      {
+        "text": "B. 拔刀互怼（据理力争）",
+        "effects": [
+          {
+            "type": "ENERGY",
+            "value": 0
+          },
+          {
+            "type": "KPI",
+            "value": 0
+          },
+          {
+            "type": "SUSPICION",
+            "value": 15
+          }
+        ],
+        "log": "[INFO] 你用架构规范把产品经理怼回去了。保住了头发，但主管看你的眼神有点冷。"
+      }
+    ]
+  },
+  {
+    "id": "EV_002",
+    "title": "HR 的突然关心",
+    "description": "飞书闪烁，HR BP 突然给你发来一条消息：'下午有空吗？去 3 号会议室聊聊发展。'",
+    "weight": 50,
+    "highRisk": true,
+    "condition": null,
+    "options": [
+      {
+        "text": "A. 战战兢兢去开会",
+        "effects": [
+          {
+            "type": "ENERGY",
+            "value": -15
+          },
+          {
+            "type": "INTERVIEW",
+            "value": -10
+          }
+        ],
+        "log": "[ALERT] 只是例行谈话，但你被 PUA 得精神衰弱，甚至对自己能不能找到下家产生了怀疑。"
+      },
+      {
+        "text": "B. 装死不回（去天台抽烟）",
+        "effects": [
+          {
+            "type": "ENERGY",
+            "value": 10
+          },
+          {
+            "type": "SUSPICION",
+            "value": 25
+          }
+        ],
+        "log": "[WARNING] 你在天台躲了半小时。精力恢复了，但你上了 HR 的'不配合'名单。"
+      }
+    ]
+  },
+  {
+    "id": "EV_003",
+    "title": "线上事故",
+    "description": "下午三点，你的手机疯狂震动——线上页面白屏了。工位上的铃声响个不停，群里@你@到飞起。你只能放下手中的八股文，切回 VS Code 排查问题。",
+    "weight": 100,
+    "condition": null,
+    "options": [
+      {
+        "text": "A. 立刻排查修复（紧急加班）",
+        "effects": [
+          {
+            "type": "ENERGY",
+            "value": -20
+          },
+          {
+            "type": "KPI",
+            "value": 15
+          },
+          {
+            "type": "SUSPICION",
+            "value": -10
+          }
+        ],
+        "log": "[BUGFIX] 连夜修好了白屏问题。团队对你刮目相看，但你已经精疲力竭。"
+      },
+      {
+        "text": "B. 先装死，等别人接手",
+        "effects": [
+          {
+            "type": "ENERGY",
+            "value": 0
+          },
+          {
+            "type": "KPI",
+            "value": -10
+          },
+          {
+            "type": "SUSPICION",
+            "value": 15
+          }
+        ],
+        "log": "[WARNING] 你假装没看到消息。最终后端同事帮忙修了，但你的绩效又多了一个污点。"
+      }
+    ]
+  },
+  {
+    "id": "EV_004",
+    "title": "猎头的橄榄枝",
+    "description": "一个陌生号码加你微信，头像是某知名互联网公司的 logo。对方开门见山：'我们有个前端岗，薪资可谈，你方便聊聊吗？'",
+    "weight": 80,
+    "condition": null,
+    "options": [
+      {
+        "text": "A. 欣然答应（开始准备面试）",
+        "effects": [
+          {
+            "type": "INTERVIEW",
+            "value": 10
+          },
+          {
+            "type": "SUSPICION",
+            "value": 5
+          }
+        ],
+        "log": "[STUDY] 你加了猎头微信，开始认真准备面试。但频繁请假的举动让领导起了疑心。"
+      },
+      {
+        "text": "B. 婉拒（先稳住再说）",
+        "effects": [
+          {
+            "type": "KPI",
+            "value": 5
+          },
+          {
+            "type": "SUSPICION",
+            "value": -5
+          }
+        ],
+        "log": "[COMMIT] 你选择先稳住当前工作。领导注意到了你的忠诚，给了你一个小需求练手。"
+      }
+    ]
+  },
+  {
+    "id": "EV_005",
+    "title": "团建还是加班",
+    "description": "部门组织'自愿'团建，目的地是郊区一个度假村。但你的需求还没做完，明天就要提测。你看了看飞书日程，又看了看 Jira 看板。",
+    "weight": 100,
+    "condition": null,
+    "options": [
+      {
+        "text": "A. 去团建（摸鱼一天）",
+        "effects": [
+          {
+            "type": "ENERGY",
+            "value": 15
+          },
+          {
+            "type": "SUSPICION",
+            "value": 10
+          }
+        ],
+        "log": "[SLACK] 你在度假村吃了一顿烤全羊，精力恢复了。但你的需求没人做，领导不太高兴。"
+      },
+      {
+        "text": "B. 留下来加班（拼命赶工）",
+        "effects": [
+          {
+            "type": "ENERGY",
+            "value": -15
+          },
+          {
+            "type": "KPI",
+            "value": 10
+          },
+          {
+            "type": "SUSPICION",
+            "value": -5
+          }
+        ],
+        "log": "[COMMIT] 你一个人留在工位上赶完了需求。KPI 涨了，但你看了一眼空荡荡的办公室，觉得自己像个局外人。"
+      }
+    ]
+  },
+  {
+    "id": "EV_006",
+    "title": "代码审查风波",
+    "description": "你的 PR 被 Tech Lead 打回了三次。评论写着：'这个组件的职责不够单一，请重构。'你看了看时间——已经快九点了。",
+    "weight": 80,
+    "condition": null,
+    "options": [
+      {
+        "text": "A. 认真重构（加班到底）",
+        "effects": [
+          {
+            "type": "ENERGY",
+            "value": -15
+          },
+          {
+            "type": "KPI",
+            "value": 10
+          }
+        ],
+        "log": "[BUGFIX] 你把组件拆成了五个，Tech Lead 终于点了 Approve。代码质量上去了，人也快散架了。"
+      },
+      {
+        "text": "B. 表面修改（来回扯皮）",
+        "effects": [
+          {
+            "type": "ENERGY",
+            "value": -5
+          },
+          {
+            "type": "SUSPICION",
+            "value": 10
+          }
+        ],
+        "log": "[WARNING] 你改了命名和注释就重新提了。Tech Lead 勉强过了，但你在他的名单上已经不太靠谱了。"
+      }
+    ]
+  },
+  {
+    "id": "EV_007",
+    "title": "裁员名册",
+    "description": "你在茶水间不小心瞥见了主管电脑上的一个 Excel 表，表格标题是'优化名单 v3.xlsx'。你的心猛地一沉。",
+    "weight": 60,
+    "highRisk": true,
+    "condition": {
+      "minDay": 15
+    },
+    "options": [
+      {
+        "text": "A. 加倍努力（拼命表现）",
+        "effects": [
+          {
+            "type": "ENERGY",
+            "value": -20
+          },
+          {
+            "type": "KPI",
+            "value": 15
+          },
+          {
+            "type": "SUSPICION",
+            "value": -10
+          }
+        ],
+        "log": "[COMMIT] 你开始疯狂写代码，主动接需求。绩效确实上去了，但你的黑眼圈也更深了。"
+      },
+      {
+        "text": "B. 开始找后路（加速面试准备）",
+        "effects": [
+          {
+            "type": "INTERVIEW",
+            "value": 20
+          },
+          {
+            "type": "SUSPICION",
+            "value": 15
+          }
+        ],
+        "log": "[STUDY] 你开始疯狂刷面试题。面试准备度上去了，但上班时的走神也被人看在眼里。"
+      }
+    ]
+  },
+  {
+    "id": "EV_008",
+    "title": "需求大变天",
+    "description": "产品突然宣布：之前做的一期需求全部推翻重来。你的三周工作量归零，新方向下周就要上线。会议室里一片死寂。",
+    "weight": 100,
+    "condition": null,
+    "options": [
+      {
+        "text": "A. 服从安排（推翻重来）",
+        "effects": [
+          {
+            "type": "ENERGY",
+            "value": -20
+          },
+          {
+            "type": "KPI",
+            "value": 5
+          },
+          {
+            "type": "SUSPICION",
+            "value": -5
+          }
+        ],
+        "log": "[WARNING] 三周白干了。你咬牙重写，代码是新的，但心是凉的。"
+      },
+      {
+        "text": "B. 据理力争（保留核心功能）",
+        "effects": [
+          {
+            "type": "ENERGY",
+            "value": -5
+          },
+          {
+            "type": "KPI",
+            "value": -5
+          },
+          {
+            "type": "SUSPICION",
+            "value": 15
+          }
+        ],
+        "log": "[ALERT] 你在会上直接对线。虽然保住了部分代码，但产品经理记住了你的'刺头'属性。"
+      }
+    ]
+  },
+  {
+    "id": "EV_009",
+    "title": "体检报告异常",
+    "description": "你的年度体检报告出来了：血压偏高、颈椎曲度变直、脂肪肝倾向。医生建议多休息，但你看了看排期，今天又要上线。",
+    "weight": 60,
+    "condition": {
+      "minDay": 10
+    },
+    "options": [
+      {
+        "text": "A. 坚持工作（命是老板的）",
+        "effects": [
+          {
+            "type": "ENERGY",
+            "value": -10
+          },
+          {
+            "type": "KPI",
+            "value": 10
+          },
+          {
+            "type": "SUSPICION",
+            "value": -5
+          }
+        ],
+        "log": "[ALERT] 你吞了两片止疼药继续搬砖。绩效涨了，但你的身体在发出红色警报。"
+      },
+      {
+        "text": "B. 请半天假休息",
+        "effects": [
+          {
+            "type": "ENERGY",
+            "value": 25
+          },
+          {
+            "type": "KPI",
+            "value": -5
+          },
+          {
+            "type": "SUSPICION",
+            "value": 5
+          }
+        ],
+        "log": "[INFO] 你去了趟医院，配了点药，在家躺了一下午。精力恢复了不少，但 KPI 又掉了一截。"
+      }
+    ]
+  },
+  {
+    "id": "EV_010",
+    "title": "甩锅大战",
+    "description": "一个线上 Bug 导致用户数据泄露。后端说是前端没做参数校验，前端说是后端接口没限流。群里吵成一锅粥，领导@了所有人。",
+    "weight": 100,
+    "condition": null,
+    "options": [
+      {
+        "text": "A. 主动背锅（大局为重）",
+        "effects": [
+          {
+            "type": "ENERGY",
+            "value": -5
+          },
+          {
+            "type": "KPI",
+            "value": -10
+          },
+          {
+            "type": "SUSPICION",
+            "value": -15
+          }
+        ],
+        "log": "[COMMIT] 你主动承认了沟通不足，领导对你的态度反而缓和了不少。KPI 掉了，但怀疑度也降了。"
+      },
+      {
+        "text": "B. 据理力争（甩回去）",
+        "effects": [
+          {
+            "type": "KPI",
+            "value": 0
+          },
+          {
+            "type": "SUSPICION",
+            "value": 10
+          }
+        ],
+        "log": "[ALERT] 你甩出了接口文档截图，证明后端接口没做限流。虽然你没错，但领导觉得你不够配合。"
+      }
+    ]
+  },
+  {
+    "id": "EV_011",
+    "title": "OKR 季度复盘",
+    "description": "OKR 季度复盘准备开始了，你需要向大 Boss 汇报目标达成情况。你的 O 写得过高，KR 一个个排着队没达标。",
+    "weight": 80,
+    "condition": null,
+    "options": [
+      {
+        "text": "A. 美化数据（乐观预估）",
+        "effects": [
+          {
+            "type": "ENERGY",
+            "value": -10
+          },
+          {
+            "type": "KPI",
+            "value": 15
+          },
+          {
+            "type": "SUSPICION",
+            "value": 5
+          }
+        ],
+        "log": "[INFO] 你给曲线图配上'乐观预期'的标注。大 Boss 点点头，虽然只是勉强过关。"
+      },
+      {
+        "text": "B. 坦白从宽（深刻反思）",
+        "effects": [
+          {
+            "type": "ENERGY",
+            "value": -5
+          },
+          {
+            "type": "KPI",
+            "value": -10
+          },
+          {
+            "type": "SUSPICION",
+            "value": -10
+          }
+        ],
+        "log": "[COMMIT] 你说：'这个季度我确实懈怠了，下个季度一定加倍。'领导对你的态度反而温和了一些。"
+      }
+    ]
+  },
+  {
+    "id": "EV_012",
+    "title": "站会表演时刻",
+    "description": "早会站会上，产品要你给当前项目排期。你一边看着自己的 Jira，一边听着大领导的 PPT，感觉自己正被 PUA。",
+    "weight": 70,
+    "condition": null,
+    "options": [
+      {
+        "text": "A. 配合说乐观排期",
+        "effects": [
+          {
+            "type": "ENERGY",
+            "value": -5
+          },
+          {
+            "type": "KPI",
+            "value": 10
+          }
+        ],
+        "log": "[COMMIT] 你说：'三天内可以上线，保证质量。'其实你需要五天，但只是为了报告好看。"
+      },
+      {
+        "text": "B. 实话实说",
+        "effects": [
+          {
+            "type": "KPI",
+            "value": -5
+          },
+          {
+            "type": "SUSPICION",
+            "value": 10
+          }
+        ],
+        "log": "[WARNING] 你说：'我需要五天，还有一个模块依赖后端。'大领导皱了皱眉，没说话。"
+      }
+    ]
+  },
+  {
+    "id": "EV_013",
+    "title": "程序员节福利",
+    "description": "10 月 24 日程序员节，公司给大家准备了一份小礼物：一本《码农黑话词典》和一个廉价廉政文化杯。",
+    "weight": 40,
+    "condition": null,
+    "options": [
+      {
+        "text": "A. 转发朋友圈",
+        "effects": [
+          {
+            "type": "ENERGY",
+            "value": 5
+          },
+          {
+            "type": "KPI",
+            "value": 3
+          }
+        ],
+        "log": "[SLACK] 你在朋友圈发了张收到福利的截图，收到一堆赞，感觉自己在晒公司的'地主牌'。"
+      },
+      {
+        "text": "B. 直接无视",
+        "effects": [
+          {
+            "type": "SUSPICION",
+            "value": 5
+          }
+        ],
+        "log": "[WARNING] 你直接把礼物放进抽屉里。HR 在群里'关心'你是否在意企业文化。"
+      }
+    ]
+  },
+  {
+    "id": "EV_014",
+    "title": "紧急上线决策",
+    "description": "你的项目今天上线，你已经通知全员准备推广文案。封版前最后一刻你发现一个兼容性 bug。",
+    "weight": 100,
+    "highRisk": true,
+    "condition": null,
+    "options": [
+      {
+        "text": "A. 继续上线赌一把",
+        "effects": [
+          {
+            "type": "KPI",
+            "value": 15
+          },
+          {
+            "type": "SUSPICION",
+            "value": -5
+          }
+        ],
+        "log": "[WARNING] 你决定赌一把。上线后没有任何报错，甚至访问量也扛住了。你是英雄。"
+      },
+      {
+        "text": "B. 立刻回滚排查",
+        "effects": [
+          {
+            "type": "ENERGY",
+            "value": -20
+          },
+          {
+            "type": "KPI",
+            "value": -5
+          },
+          {
+            "type": "SUSPICION",
+            "value": 10
+          }
+        ],
+        "log": "[BUGFIX] 你坚持回滚，连夜修复 bug。KPI 虽然小跌，但你没让 Bug 暴露在用户面前。"
+      }
+    ]
+  },
+  {
+    "id": "EV_015",
+    "title": "深夜系统崩溃",
+    "description": "凌晨一点，你的手机响了——系统线上挂了。运维要求你立刻远程排查问题，但明天有个重要演示。",
+    "weight": 90,
+    "highRisk": true,
+    "condition": null,
+    "options": [
+      {
+        "text": "A. 通宵排查",
+        "effects": [
+          {
+            "type": "ENERGY",
+            "value": -30
+          },
+          {
+            "type": "KPI",
+            "value": 20
+          },
+          {
+            "type": "SUSPICION",
+            "value": -10
+          }
+        ],
+        "log": "[BUGFIX] 你通宵排查，终于找到了问题点。第二天虽然熬成熊猫眼，但你被领导表扬了。"
+      },
+      {
+        "text": "B. 明天再处理",
+        "effects": [
+          {
+            "type": "ENERGY",
+            "value": 10
+          },
+          {
+            "type": "KPI",
+            "value": -15
+          },
+          {
+            "type": "SUSPICION",
+            "value": 15
+          }
+        ],
+        "log": "[ALERT] 你睡了一觉。第二天上线后依然有问题，真是'雁过留痕'。领导很生气。"
+      }
+    ]
+  },
+  {
+    "id": "EV_016",
+    "title": "架构重构之痛",
+    "description": "你们组决定对技术架构做一次大重构。作为前端负责人，你被分配到最复杂的模块：前端路由。",
+    "weight": 80,
+    "condition": null,
+    "options": [
+      {
+        "text": "A. 全力推进",
+        "effects": [
+          {
+            "type": "ENERGY",
+            "value": -40
+          },
+          {
+            "type": "KPI",
+            "value": 25
+          },
+          {
+            "type": "SUSPICION",
+            "value": -15
+          }
+        ],
+        "log": "[COMMIT] 你把旧路由代码重写了一遍，还做成了解耦。Code Review 通过，你收到了团队一声谢谢。"
+      },
+      {
+        "text": "B. 拖延战术",
+        "effects": [
+          {
+            "type": "ENERGY",
+            "value": 5
+          },
+          {
+            "type": "SUSPICION",
+            "value": 20
+          }
+        ],
+        "log": "[WARNING] 你说这个模块很复杂，稳定性优先。领导让你先做个方案出来。然后就没声音了。"
+      }
+    ]
+  },
+  {
+    "id": "EV_017",
+    "title": "技术分享尴尬",
+    "description": "公司安排你做技术分享会的负责人。你上台后发现 PPT 居然没有自动讲义功能，只能用口头说。",
+    "weight": 50,
+    "condition": null,
+    "options": [
+      {
+        "text": "A. 磕磕巴巴念稿",
+        "effects": [
+          {
+            "type": "ENERGY",
+            "value": -10
+          },
+          {
+            "type": "KPI",
+            "value": 5
+          },
+          {
+            "type": "SUSPICION",
+            "value": 5
+          }
+        ],
+        "log": "[WARNING] 你态度很端正，但过程磕磕巴巴。领导在台下礼貌鼓掌，但眼神里有一丝'还得提升'。"
+      },
+      {
+        "text": "B. 改为 Q&A 互动",
+        "effects": [
+          {
+            "type": "KPI",
+            "value": 15
+          },
+          {
+            "type": "SUSPICION",
+            "value": -5
+          }
+        ],
+        "log": "[INFO] 你现场改成了 Q&A 形式，把干货抛出去。大家提问很活跃，领导露出赞许的微笑。"
+      }
+    ]
+  },
+  {
+    "id": "EV_018",
+    "title": "离职潮冲击",
+    "description": "你发现公司的老员工一个个都走了。工程师老王说这项目没前途了，他的工位被清空，你独自看向空椅子。",
+    "weight": 70,
+    "condition": {
+      "minDay": 25
+    },
+    "options": [
+      {
+        "text": "A. 保持观望（刷面试题库）",
+        "effects": [
+          {
+            "type": "INTERVIEW",
+            "value": 10
+          },
+          {
+            "type": "SUSPICION",
+            "value": 5
+          }
+        ],
+        "log": "[STUDY] 你没有表态，但开始刷一些面试题库。感觉像看好时机。"
+      },
+      {
+        "text": "B. 坚定留下",
+        "effects": [
+          {
+            "type": "KPI",
+            "value": 10
+          },
+          {
+            "type": "ENERGY",
+            "value": -10
+          }
+        ],
+        "log": "[COMMIT] 你对老板说：'我在这里干了三年，不会走的。'他拍拍你的肩膀，像是安慰也像赞赏。"
+      }
+    ]
+  },
+  {
+    "id": "EV_019",
+    "title": "API 废弃之泪",
+    "description": "你正在写一个复杂组件，发现一个你用了一年的函数居然被废弃了。你只能紧急重构。",
+    "weight": 70,
+    "condition": null,
+    "options": [
+      {
+        "text": "A. 连夜修复",
+        "effects": [
+          {
+            "type": "ENERGY",
+            "value": -25
+          },
+          {
+            "type": "KPI",
+            "value": 15
+          },
+          {
+            "type": "SUSPICION",
+            "value": -5
+          }
+        ],
+        "log": "[BUGFIX] 你重新学习了新版 API，改完代码后已经半夜两点。你成了团队的救火队长。"
+      },
+      {
+        "text": "B. 拖到明天再说",
+        "effects": [
+          {
+            "type": "ENERGY",
+            "value": 10
+          },
+          {
+            "type": "KPI",
+            "value": -5
+          },
+          {
+            "type": "SUSPICION",
+            "value": 10
+          }
+        ],
+        "log": "[SLACK] 你说明天排查会更仔细。第二天却发现后端换了个接口。你笑了笑说要先做移动端适配。"
+      }
+    ]
+  },
+  {
+    "id": "EV_020",
+    "title": "产品经理改需求",
+    "description": "昨晚加班到一点的项目，今早产品经理又说：'文案能不能加个*星号标注？'你心想昨晚一晚上都没睡。",
+    "weight": 80,
+    "condition": null,
+    "options": [
+      {
+        "text": "A. 默默改完",
+        "effects": [
+          {
+            "type": "ENERGY",
+            "value": -15
+          },
+          {
+            "type": "KPI",
+            "value": 10
+          }
+        ],
+        "log": "[COMMIT] 你打开代码，三秒钟改完。继续写旁边的那个需求，假装耳边只有键盘声。"
+      },
+      {
+        "text": "B. 反问产品经理",
+        "effects": [
+          {
+            "type": "SUSPICION",
+            "value": 10
+          },
+          {
+            "type": "KPI",
+            "value": -5
+          }
+        ],
+        "log": "[WARNING] 你说这个需求昨天讨论结束后才提。产品说：'那就加个 TODO 吧。'你懂了。"
+      }
+    ]
+  },
+  {
+    "id": "EV_021",
+    "title": "年会表演环节",
+    "description": "公司年会上，你作为技术骨干被安排上台表演'前端舞'。主持人问你是否想抽奖金环节的特等奖。",
+    "weight": 60,
+    "condition": null,
+    "options": [
+      {
+        "text": "A. 上台抽奖",
+        "effects": [
+          {
+            "type": "ENERGY",
+            "value": 10
+          },
+          {
+            "type": "KPI",
+            "value": 5
+          }
+        ],
+        "log": "[SLACK] 你在台上晃了两下，居然抽到了手机！同事们鼓起掌来，老板也在旁边笑。"
+      },
+      {
+        "text": "B. 低调溜掉",
+        "effects": [
+          {
+            "type": "SUSPICION",
+            "value": 5
+          }
+        ],
+        "log": "[WARNING] 你在台下拍了两张照片就溜了。领导似乎发现了你逃避'团队文化建设'的意图。"
+      }
+    ]
+  },
+  {
+    "id": "EV_022",
+    "title": "技术债务还清",
+    "description": "你决定花两周时间还清那些'临时凑合'的技术债。你告诉领导这很重要。",
+    "weight": 70,
+    "condition": null,
+    "options": [
+      {
+        "text": "A. 全力重构",
+        "effects": [
+          {
+            "type": "ENERGY",
+            "value": -30
+          },
+          {
+            "type": "KPI",
+            "value": 20
+          },
+          {
+            "type": "SUSPICION",
+            "value": -10
+          }
+        ],
+        "log": "[COMMIT] 你把一堆样板代码、重复的 util 函数、过期的依赖全部清理了。项目重新变清爽了。"
+      },
+      {
+        "text": "B. 先做业务需求",
+        "effects": [
+          {
+            "type": "KPI",
+            "value": 10
+          },
+          {
+            "type": "SUSPICION",
+            "value": 5
+          }
+        ],
+        "log": "[WARNING] 你说技术债会在下个迭代完成。但下个迭代的需求又来了。你又加了一个 TODO。"
+      }
+    ]
+  },
+  {
+    "id": "EV_023",
+    "title": "跨部门撕逼会议",
+    "description": "你的模块需要后端接口支持，但后端团队表示要优先做其他项目。你需要开会协商。",
+    "weight": 90,
+    "condition": null,
+    "options": [
+      {
+        "text": "A. 强势主张",
+        "effects": [
+          {
+            "type": "KPI",
+            "value": 10
+          },
+          {
+            "type": "SUSPICION",
+            "value": 15
+          }
+        ],
+        "log": "[ALERT] 你当场翻旧账，要求对方必须先实现接口。对方虽然同意了，但关系有点僵。"
+      },
+      {
+        "text": "B. 合作态度",
+        "effects": [
+          {
+            "type": "SUSPICION",
+            "value": -10
+          },
+          {
+            "type": "KPI",
+            "value": 5
+          }
+        ],
+        "log": "[COMMIT] 你请求对方帮忙，并表示会请顿饭。后端同意在下周排期，你松了口气。"
+      }
+    ]
+  },
+  {
+    "id": "EV_024",
+    "title": "周报总结功夫",
+    "description": "又到了每周五写周报的时候了。你过去这一周忙得乱七八糟，但需要写出一份漂亮的工作总结。",
+    "weight": 60,
+    "condition": null,
+    "options": [
+      {
+        "text": "A. 适度美化",
+        "effects": [
+          {
+            "type": "ENERGY",
+            "value": -5
+          },
+          {
+            "type": "KPI",
+            "value": 10
+          }
+        ],
+        "log": "[INFO] 你把'修了个小 bug'写成'优化了系统稳定性'。领导看了很满意。"
+      },
+      {
+        "text": "B. 如实记录",
+        "effects": [
+          {
+            "type": "SUSPICION",
+            "value": 5
+          }
+        ],
+        "log": "[WARNING] 你说了一堆琐碎需求。领导看后不太满意，问你这个周有没有'核心贡献'。"
+      }
+    ]
+  },
+  {
+    "id": "EV_025",
+    "title": "临时画饼",
+    "description": "老板把你拉到办公室，说：'你这个项目表现很好，年底可能给你升职加薪。'但你感觉他在画饼。",
+    "weight": 50,
+    "condition": null,
+    "options": [
+      {
+        "text": "A. 欣然受饼",
+        "effects": [
+          {
+            "type": "ENERGY",
+            "value": 10
+          },
+          {
+            "type": "KPI",
+            "value": 10
+          }
+        ],
+        "log": "[SLACK] 你说谢谢老板鼓励，更加努力。年底虽然没升职加薪，但你有'我被重视了'的感觉。"
+      },
+      {
+        "text": "B. 现实分析",
+        "effects": [
+          {
+            "type": "SUSPICION",
+            "value": 5
+          }
+        ],
+        "log": "[WARNING] 你说：'老板，能否给一个具体的时间表？'老板说：'这个嘛，公司还在评估。'你懂了。"
+      }
+    ]
+  },
+  {
+    "id": "EV_026",
+    "title": "封版夜加班",
+    "description": "今晚你们组准备封版上线，但产品又加了个临时需求。所有人都在加班。",
+    "weight": 85,
+    "condition": null,
+    "options": [
+      {
+        "text": "A. 一鼓作气完成",
+        "effects": [
+          {
+            "type": "ENERGY",
+            "value": -35
+          },
+          {
+            "type": "KPI",
+            "value": 20
+          },
+          {
+            "type": "SUSPICION",
+            "value": -10
+          }
+        ],
+        "log": "[COMMIT] 你熬到凌晨四点，终于提交了最后一行代码。上线成功，你成了团队的英雄，但第二天起不来床了。"
+      },
+      {
+        "text": "B. 反对封版延期",
+        "effects": [
+          {
+            "type": "KPI",
+            "value": -10
+          },
+          {
+            "type": "SUSPICION",
+            "value": 15
+          }
+        ],
+        "log": "[ALERT] 你说这个需求应该放到下一个版本。领导说：'可是老板下周就要演示。'你只能咬牙重写。"
+      }
+    ]
+  },
+  {
+    "id": "EV_027",
+    "title": "代码高亮系统问题",
+    "description": "你在一个大型项目中添加高亮主题切换功能时，发现原有主题系统完全不符合你的思路。",
+    "weight": 70,
+    "condition": null,
+    "options": [
+      {
+        "text": "A. 自己重写系统",
+        "effects": [
+          {
+            "type": "ENERGY",
+            "value": -30
+          },
+          {
+            "type": "KPI",
+            "value": 15
+          },
+          {
+            "type": "SUSPICION",
+            "value": -5
+          }
+        ],
+        "log": "[COMMIT] 你花了 3 天重新写了一个 CSS 主题生成器，代码高度可定制。团队给你的效率点赞。"
+      },
+      {
+        "text": "B. 用原来的凑合",
+        "effects": [
+          {
+            "type": "SUSPICION",
+            "value": 10
+          }
+        ],
+        "log": "[WARNING] 你让别人在已有主题上改。最后改得乱七八糟，你也可以甩锅了。"
+      }
+    ]
+  },
+  {
+    "id": "EV_028",
+    "title": "临时抱佛脚学技术",
+    "description": "技术分享会上，你被要求讲一个你其实只写过一次的技术。你只能紧急学习。",
+    "weight": 60,
+    "condition": null,
+    "options": [
+      {
+        "text": "A. 临时苦学",
+        "effects": [
+          {
+            "type": "ENERGY",
+            "value": -25
+          },
+          {
+            "type": "KPI",
+            "value": 10
+          },
+          {
+            "type": "INTERVIEW",
+            "value": 5
+          }
+        ],
+        "log": "[STUDY] 你花了两天恶补技术，最后在台上讲得头头是道。虽然老板问的几个问题你答不上来。"
+      },
+      {
+        "text": "B. 找别人代讲",
+        "effects": [
+          {
+            "type": "KPI",
+            "value": -5
+          },
+          {
+            "type": "SUSPICION",
+            "value": 10
+          }
+        ],
+        "log": "[WARNING] 你让同事帮忙代讲了。大家都挺满意，只是后来老板问你问题，你只能模糊回应。"
+      }
+    ]
+  },
+  {
+    "id": "EV_029",
+    "title": "需求评审会",
+    "description": "这个周要评审一个新需求，但产品经理的 PRD 写得含糊不清，细节全靠猜。",
+    "weight": 70,
+    "condition": null,
+    "options": [
+      {
+        "text": "A. 当场追问",
+        "effects": [
+          {
+            "type": "ENERGY",
+            "value": -10
+          },
+          {
+            "type": "KPI",
+            "value": 10
+          }
+        ],
+        "log": "[COMMIT] 你在会上提了一堆问题，产品当众解释清楚了。需求更清晰了，但会议拖延了一小时。"
+      },
+      {
+        "text": "B. 会后私聊",
+        "effects": [
+          {
+            "type": "SUSPICION",
+            "value": 10
+          }
+        ],
+        "log": "[WARNING] 你说需求不太清楚，会后找产品私聊。但产品说明天才有时间看。你急了。"
+      }
+    ]
+  },
+  {
+    "id": "EV_030",
+    "title": "临时需求插队",
+    "description": "你们的迭代已经排满了需求，但老板说有个'超级重要'的需求需要插进来，今晚就要上线。",
+    "weight": 95,
+    "highRisk": true,
+    "condition": null,
+    "options": [
+      {
+        "text": "A. 接受插队",
+        "effects": [
+          {
+            "type": "ENERGY",
+            "value": -40
+          },
+          {
+            "type": "KPI",
+            "value": 20
+          },
+          {
+            "type": "SUSPICION",
+            "value": -15
+          }
+        ],
+        "log": "[COMMIT] 你熬夜完成了所有需求，第二天成了团队的救火英雄。虽然你第二天快晕了。"
+      },
+      {
+        "text": "B. 表示困难",
+        "effects": [
+          {
+            "type": "KPI",
+            "value": -15
+          },
+          {
+            "type": "SUSPICION",
+            "value": 20
+          }
+        ],
+        "log": "[ALERT] 你说排期已经满了。老板说：'那我找别人做吧。'你心里已经慌了。"
+      }
+    ]
+  },
+  {
+    "id": "EV_031",
+    "title": "需求退改风险",
+    "description": "你的团队要在本周五上线，但产品经理在周四下午说：'这个需求我们需要改一个细节，不是很紧急。'",
+    "weight": 80,
+    "condition": null,
+    "options": [
+      {
+        "text": "A. 拒绝变更",
+        "effects": [
+          {
+            "type": "KPI",
+            "value": 10
+          },
+          {
+            "type": "SUSPICION",
+            "value": 5
+          }
+        ],
+        "log": "[COMMIT] 你说已经封版了，这个需求只能下周上线。产品有些不悦，但最后还是同意了。"
+      },
+      {
+        "text": "B. 同意修改",
+        "effects": [
+          {
+            "type": "ENERGY",
+            "value": -20
+          },
+          {
+            "type": "SUSPICION",
+            "value": -5
+          }
+        ],
+        "log": "[WARNING] 你临时加班修改了这个需求，封版时间延后了 4 小时。最后还是上线成功了。"
+      }
+    ]
+  },
+  {
+    "id": "EV_032",
+    "title": "代码文档烂摊子",
+    "description": "你加入项目后发现没有文档，之前的模块写得很乱，你需要一边写功能一边补文档。",
+    "weight": 70,
+    "condition": null,
+    "options": [
+      {
+        "text": "A. 先补文档再写代码",
+        "effects": [
+          {
+            "type": "ENERGY",
+            "value": -30
+          },
+          {
+            "type": "KPI",
+            "value": 15
+          },
+          {
+            "type": "SUSPICION",
+            "value": -10
+          }
+        ],
+        "log": "[COMMIT] 你花了 2 天时间补完了接口文档、字段说明、调用流程图。团队可以更高效的协作了。"
+      },
+      {
+        "text": "B. 写完代码再补",
+        "effects": [
+          {
+            "type": "SUSPICION",
+            "value": 10
+          }
+        ],
+        "log": "[WARNING] 你说文档会在需求结束后补上。然后你就再也没空补了。"
+      }
+    ]
+  },
+  {
+    "id": "EV_033",
+    "title": "紧急技术选型",
+    "description": "老板说要在一个月内完成一个新模块，技术选型还没定，需要你马上给出方案。",
+    "weight": 75,
+    "condition": null,
+    "options": [
+      {
+        "text": "A. 深度选型",
+        "effects": [
+          {
+            "type": "ENERGY",
+            "value": -35
+          },
+          {
+            "type": "KPI",
+            "value": 20
+          },
+          {
+            "type": "SUSPICION",
+            "value": -10
+          }
+        ],
+        "log": "[STUDY] 你花了一周研究各种技术方案，输出了详尽的技术选型方案。团队选了你推荐的技术栈，项目进展顺利。"
+      },
+      {
+        "text": "B. 临时选型",
+        "effects": [
+          {
+            "type": "KPI",
+            "value": 10
+          },
+          {
+            "type": "SUSPICION",
+            "value": 10
+          }
+        ],
+        "log": "[WARNING] 你说用现有的 Vue3，但团队发现有问题，需要回滚。你重新选型用了 React18。"
+      }
+    ]
+  },
+  {
+    "id": "EV_034",
+    "title": "痛失项目开发权限",
+    "description": "你的账号不知道为什么被上锁了，无法继续开发。IT 部门说需要审批。你急着上线。",
+    "weight": 65,
+    "highRisk": true,
+    "condition": null,
+    "options": [
+      {
+        "text": "A. 立即申请解封",
+        "effects": [
+          {
+            "type": "ENERGY",
+            "value": -20
+          },
+          {
+            "type": "KPI",
+            "value": 5
+          }
+        ],
+        "log": "[COMMIT] 你提交了申请，说明急迫性，IT 当场给你解封，但你的 KPI 还是掉了一点。"
+      },
+      {
+        "text": "B. 联系领导帮忙",
+        "effects": [
+          {
+            "type": "SUSPICION",
+            "value": -10
+          }
+        ],
+        "log": "[INFO] 你找了领导，他直接打电话给 IT 经理给你开了权限。第二天，你被'关心'了。"
+      }
+    ]
+  },
+  {
+    "id": "EV_035",
+    "title": "长期加班综合征",
+    "description": "你这已经是连续两个月每晚 10 点都是最晚走的。你感觉自己的身体越来越差，却不敢请假。",
+    "weight": 70,
+    "condition": {
+      "minDay": 20
+    },
+    "options": [
+      {
+        "text": "A. 坚持到底",
+        "effects": [
+          {
+            "type": "ENERGY",
+            "value": -20
+          },
+          {
+            "type": "KPI",
+            "value": 15
+          },
+          {
+            "type": "SUSPICION",
+            "value": -10
+          }
+        ],
+        "log": "[COMMIT] 你坚持了下来，项目如期完成。但你在一次晨会上突然低血糖晕倒了。领导从此开始关心你的健康。"
+      },
+      {
+        "text": "B. 请一周假休息",
+        "effects": [
+          {
+            "type": "ENERGY",
+            "value": 30
+          },
+          {
+            "type": "KPI",
+            "value": -10
+          },
+          {
+            "type": "SUSPICION",
+            "value": 15
+          }
+        ],
+        "log": "[SLACK] 你请了一周年假，休息后回来活力满格。但项目进度有些慢了。"
+      }
+    ]
+  },
+  {
+    "id": "EV_036",
+    "title": "紧急修复产品错字",
+    "description": "产品经理说他们的文案里面有错别字，要求立刻修复，哪怕是今天的部署。",
+    "weight": 60,
+    "condition": null,
+    "options": [
+      {
+        "text": "A. 立刻修复",
+        "effects": [
+          {
+            "type": "ENERGY",
+            "value": -15
+          },
+          {
+            "type": "SUSPICION",
+            "value": -5
+          }
+        ],
+        "log": "[COMMIT] 你改完文案，重新部署了一次。虽然冒了风险，但上线后一切顺利。"
+      },
+      {
+        "text": "B. 推迟改",
+        "effects": [
+          {
+            "type": "KPI",
+            "value": -5
+          },
+          {
+            "type": "SUSPICION",
+            "value": 10
+          }
+        ],
+        "log": "[WARNING] 你说下次上线再说。产品很不高兴，在群里'表扬'了这个 Bug。"
+      }
+    ]
+  },
+  {
+    "id": "EV_037",
+    "title": "技术氛围营造",
+    "description": "团队要举办一个技术分享会增强氛围，需要你准备内容。你最近很忙。",
+    "weight": 50,
+    "condition": null,
+    "options": [
+      {
+        "text": "A. 认真准备",
+        "effects": [
+          {
+            "type": "ENERGY",
+            "value": -20
+          },
+          {
+            "type": "KPI",
+            "value": 10
+          },
+          {
+            "type": "SUSPICION",
+            "value": -5
+          }
+        ],
+        "log": "[COMMIT] 你准备了 1 小时的 PPT 和演示，受到了大家的欢迎。团队氛围也好了不少。"
+      },
+      {
+        "text": "B. 随便凑合",
+        "effects": [
+          {
+            "type": "SUSPICION",
+            "value": 10
+          }
+        ],
+        "log": "[WARNING] 你说说自己最近的项目经验。大家听得昏昏欲睡。领导意味深长地看了你一眼。"
+      }
+    ]
+  },
+  {
+    "id": "EV_038",
+    "title": "项目交付延期",
+    "description": "你原本承诺的交付日期已经过了，但模块还没测试完。你需要决定是否和老板说真话。",
+    "weight": 85,
+    "highRisk": true,
+    "condition": null,
+    "options": [
+      {
+        "text": "A. 如实提交延期",
+        "effects": [
+          {
+            "type": "KPI",
+            "value": -10
+          },
+          {
+            "type": "SUSPICION",
+            "value": 5
+          }
+        ],
+        "log": "[COMMIT] 你说模块需要更长时间，老板表示理解。你的 KPI 小跌，但你不必冒险。"
+      },
+      {
+        "text": "B. 承诺按期",
+        "effects": [
+          {
+            "type": "ENERGY",
+            "value": -30
+          },
+          {
+            "type": "KPI",
+            "value": 15
+          }
+        ],
+        "log": "[WARNING] 你咬牙加班按时完成，即使上线当天晚了点，但没有延期。KPI 上涨，你人却垮了。"
+      }
+    ]
+  },
+  {
+    "id": "EV_039",
+    "title": "设计图理解错误",
+    "description": "你做的页面和设计稿不一致，被发现后需要修改。你说你理解错了。",
+    "weight": 60,
+    "condition": null,
+    "options": [
+      {
+        "text": "A. 立即修复",
+        "effects": [
+          {
+            "type": "ENERGY",
+            "value": -20
+          },
+          {
+            "type": "SUSPICION",
+            "value": 5
+          }
+        ],
+        "log": "[COMMIT] 你修正了所有 UI 问题，重新提交了测试。设计师很高兴，但你加班了 5 小时。"
+      },
+      {
+        "text": "B. 说设计有问题",
+        "effects": [
+          {
+            "type": "SUSPICION",
+            "value": 15
+          }
+        ],
+        "log": "[ALERT] 你说设计稿确实太奇怪了，才导致了 Bug。设计师说你没与他沟通。"
+      }
+    ]
+  },
+  {
+    "id": "EV_040",
+    "title": "临时缺失需求文档",
+    "description": "产品经理说这个需求的文档是内部讨论得出的，没有正式 PRD。你需要自己做需求理解。",
+    "weight": 70,
+    "condition": null,
+    "options": [
+      {
+        "text": "A. 自己写文档",
+        "effects": [
+          {
+            "type": "ENERGY",
+            "value": -30
+          },
+          {
+            "type": "KPI",
+            "value": 15
+          },
+          {
+            "type": "SUSPICION",
+            "value": -5
+          }
+        ],
+        "log": "[COMMIT] 你用自己的理解写了一份项目需求文档，并让产品确认。开发过程很顺利。"
+      },
+      {
+        "text": "B. 先开个需求会",
+        "effects": [
+          {
+            "type": "SUSPICION",
+            "value": 10
+          }
+        ],
+        "log": "[WARNING] 你要求产品组织个需求评审会。结果产品说这个模块他自己写 meet 了，不需要开会了。"
+      }
+    ]
+  },
+  {
+    "id": "EV_041",
+    "title": "产品临时要新功能",
+    "description": "你的迭代已经开发了 2 周，产品突然说要加一个新功能，说这很有价值。",
+    "weight": 75,
+    "condition": null,
+    "options": [
+      {
+        "text": "A. 拒绝变更",
+        "effects": [
+          {
+            "type": "KPI",
+            "value": 5
+          },
+          {
+            "type": "SUSPICION",
+            "value": 10
+          }
+        ],
+        "log": "[COMMIT] 你说这个需求不能在这个迭代加，需要下个迭代评估。产品说会找老板。你担心了。"
+      },
+      {
+        "text": "B. 加班完成",
+        "effects": [
+          {
+            "type": "ENERGY",
+            "value": -40
+          },
+          {
+            "type": "KPI",
+            "value": 20
+          }
+        ],
+        "log": "[COMMIT] 你做了一个周日加班的决定，最终完成了需求。上线那天老板在群里表扬了你。"
+      }
+    ]
+  },
+  {
+    "id": "EV_042",
+    "title": "部门聚餐压力",
+    "description": "周五晚上部门聚餐，你不能不去，因为老板也会去。但你已经累得不行了。",
+    "weight": 40,
+    "condition": null,
+    "options": [
+      {
+        "text": "A. 强撑参加",
+        "effects": [
+          {
+            "type": "ENERGY",
+            "value": -20
+          },
+          {
+            "type": "KPI",
+            "value": 5
+          }
+        ],
+        "log": "[SLACK] 你全程微笑，吃完后又唱歌到凌晨。第二天上班，你感觉要撑不住了。"
+      },
+      {
+        "text": "B. 说家里有急事",
+        "effects": [
+          {
+            "type": "ENERGY",
+            "value": 10
+          },
+          {
+            "type": "SUSPICION",
+            "value": 5
+          }
+        ],
+        "log": "[INFO] 你说家里临时有急事，无法参加。老板说没关系，你松了口气。"
+      }
+    ]
+  },
+  {
+    "id": "EV_043",
+    "title": "执行力测试挑战",
+    "description": "老板说你执行力不够，要求在月底之前完成多个任务。你觉得这几乎不可能。",
+    "weight": 85,
+    "condition": null,
+    "options": [
+      {
+        "text": "A. 全力冲刺",
+        "effects": [
+          {
+            "type": "ENERGY",
+            "value": -45
+          },
+          {
+            "type": "KPI",
+            "value": 25
+          },
+          {
+            "type": "SUSPICION",
+            "value": -15
+          }
+        ],
+        "log": "[COMMIT] 你连续加班 3 个通宵，最终按时完成了所有任务。老板在月会上点名表扬你。"
+      },
+      {
+        "text": "B. 申请调整排期",
+        "effects": [
+          {
+            "type": "KPI",
+            "value": -15
+          },
+          {
+            "type": "SUSPICION",
+            "value": 20
+          }
+        ],
+        "log": "[ALERT] 你说这个排期不合理，要求调整。老板说：'那你先完成最重要的。'你只能熬夜。"
+      }
+    ]
+  },
+  {
+    "id": "EV_044",
+    "title": "代码提交被拒",
+    "description": "你的代码因为格式问题被 CI 拒了 3 次。你需要检查。",
+    "weight": 60,
+    "condition": null,
+    "options": [
+      {
+        "text": "A. 彻底修复",
+        "effects": [
+          {
+            "type": "ENERGY",
+            "value": -15
+          },
+          {
+            "type": "KPI",
+            "value": 5
+          }
+        ],
+        "log": "[COMMIT] 你修复了所有 lint 错误，提交了新代码。虽然 CI 跑了 10 分钟，但最终通过了。"
+      },
+      {
+        "text": "B. 直接 pass",
+        "effects": [
+          {
+            "type": "SUSPICION",
+            "value": 15
+          }
+        ],
+        "log": "[WARNING] 你说 CI 太敏感，让运维调低规则。运维说：'这个规则是所有项目都要遵守的。'你无语了。"
+      }
+    ]
+  },
+  {
+    "id": "EV_045",
+    "title": "项目数据泄露",
+    "description": "运维发现你们的测试环境有敏感数据，之前的部署出问题了。你要紧急排查。",
+    "weight": 90,
+    "highRisk": true,
+    "condition": null,
+    "options": [
+      {
+        "text": "A. 通宵排查",
+        "effects": [
+          {
+            "type": "ENERGY",
+            "value": -30
+          },
+          {
+            "type": "KPI",
+            "value": 15
+          },
+          {
+            "type": "SUSPICION",
+            "value": -10
+          }
+        ],
+        "log": "[BUGFIX] 你发现了数据泄露的原因，立即修复了漏洞。虽然团队熬夜了。"
+      },
+      {
+        "text": "B. 交给运维处理",
+        "effects": [
+          {
+            "type": "KPI",
+            "value": -10
+          },
+          {
+            "type": "SUSPICION",
+            "value": 15
+          }
+        ],
+        "log": "[ALERT] 你说这属于运维问题，让他们处理。最后运维告诉你：'这个代码是你写的。'"
+      }
+    ]
+  },
+  {
+    "id": "EV_046",
+    "title": "老板临时大会",
+    "description": "老板说要在今天中午分享会上展示你们的新功能，所有的 Demo 材料还未准备好。",
+    "weight": 90,
+    "highRisk": true,
+    "condition": null,
+    "options": [
+      {
+        "text": "A. 全力准备",
+        "effects": [
+          {
+            "type": "ENERGY",
+            "value": -35
+          },
+          {
+            "type": "KPI",
+            "value": 20
+          }
+        ],
+        "log": "[COMMIT] 你在上线前做了最后的修改，会议上的演示非常成功。老板现场问了你开发经验。"
+      },
+      {
+        "text": "B. 让产品演示",
+        "effects": [
+          {
+            "type": "KPI",
+            "value": -10
+          },
+          {
+            "type": "SUSPICION",
+            "value": 15
+          }
+        ],
+        "log": "[ALERT] 你让产品来做说明。结果演示过程中出现了 Bug，老板当场责怪团队。"
+      }
+    ]
+  },
+  {
+    "id": "EV_047",
+    "title": "机器意外宕机",
+    "description": "你的开发环境的主机突然宕机了，原本在这个机器上的代码都没有保存。",
+    "weight": 60,
+    "condition": null,
+    "options": [
+      {
+        "text": "A. 重新配置",
+        "effects": [
+          {
+            "type": "ENERGY",
+            "value": -20
+          },
+          {
+            "type": "KPI",
+            "value": 5
+          }
+        ],
+        "log": "[COMMIT] 你用了一小时重新配置了环境，并从 Git 恢复了代码。虽然进度慢了一天。"
+      },
+      {
+        "text": "B. 换个机器用",
+        "effects": [
+          {
+            "type": "SUSPICION",
+            "value": 10
+          }
+        ],
+        "log": "[WARNING] 你把自己的代码备份推送到别人的机器完成了开发。最后你必须和 IT 开说明会。"
+      }
+    ]
+  },
+  {
+    "id": "EV_048",
+    "title": "沟通失误误上线",
+    "description": "你和测试沟通失误，他们以为你们还在开发中，其实已经部署到线上。后发现 Bug 必须紧急回滚。",
+    "weight": 75,
+    "condition": null,
+    "options": [
+      {
+        "text": "A. 紧急回滚修复",
+        "effects": [
+          {
+            "type": "ENERGY",
+            "value": -25
+          },
+          {
+            "type": "KPI",
+            "value": 10
+          }
+        ],
+        "log": "[BUGFIX] 你连夜修复了 Bug，同步了新代码。第二天测试后问题消失。"
+      },
+      {
+        "text": "B. 承认沟通失误",
+        "effects": [
+          {
+            "type": "SUSPICION",
+            "value": 15
+          }
+        ],
+        "log": "[ALERT] 你说沟通确实不够。整个团队必须重新结算上线排期。你被要求以后必须流程化。"
+      }
+    ]
+  },
+  {
+    "id": "EV_049",
+    "title": "依赖包崩溃",
+    "description": "你引入的第三方依赖包停更了，而且你的版本有问题。你必须自己改源码。",
+    "weight": 70,
+    "condition": null,
+    "options": [
+      {
+        "text": "A. 自己修复源码",
+        "effects": [
+          {
+            "type": "ENERGY",
+            "value": -30
+          },
+          {
+            "type": "KPI",
+            "value": 15
+          }
+        ],
+        "log": "[COMMIT] 你 Fork 了他们的仓库，修复了 Bug，重新发布了自己的版本。团队以后再用也没问题了。"
+      },
+      {
+        "text": "B. 找类似的替换",
+        "effects": [
+          {
+            "type": "SUSPICION",
+            "value": 10
+          }
+        ],
+        "log": "[WARNING] 你找了个新的包换掉。但是新包也有兼容性问题，你还是需要打一个补丁。"
+      }
+    ]
+  },
+  {
+    "id": "EV_050",
+    "title": "紧急临时需求迭代",
+    "description": "老板说有个需求下周要上线，但这个迭代已经完成了。你需要重新安排开发。",
+    "weight": 80,
+    "condition": null,
+    "options": [
+      {
+        "text": "A. 加班完成",
+        "effects": [
+          {
+            "type": "ENERGY",
+            "value": -35
+          },
+          {
+            "type": "KPI",
+            "value": 20
+          }
+        ],
+        "log": "[COMMIT] 你用了一周时间，连续加班，最终上线了需求。老板在会后表扬了你。"
+      },
+      {
+        "text": "B. 延期回应",
+        "effects": [
+          {
+            "type": "KPI",
+            "value": -15
+          },
+          {
+            "type": "SUSPICION",
+            "value": 20
+          }
+        ],
+        "log": "[ALERT] 你说这个需求太紧急，没法排期。老板找了别的团队做，你被拉黑了。"
+      }
+    ]
+  },
+  {
+    "id": "EV_051",
+    "title": "业务优先级逆转",
+    "description": "原本定好的业务优先级，因为一个临时需求全部打乱了。你需要重新排期。",
+    "weight": 70,
+    "condition": null,
+    "options": [
+      {
+        "text": "A. 接受调整",
+        "effects": [
+          {
+            "type": "ENERGY",
+            "value": -25
+          },
+          {
+            "type": "KPI",
+            "value": 10
+          }
+        ],
+        "log": "[COMMIT] 你快速调整了需求排期，优先做了最重要的。大家虽然累，但上线成功。"
+      },
+      {
+        "text": "B. 坚持原排期",
+        "effects": [
+          {
+            "type": "KPI",
+            "value": -10
+          },
+          {
+            "type": "SUSPICION",
+            "value": 15
+          }
+        ],
+        "log": "[ALERT] 你说原计划不能改，要老板自己决定。老板最后强制调整了。"
+      }
+    ]
+  },
+  {
+    "id": "EV_052",
+    "title": "离职员工交接",
+    "description": "一个老员工离职，他的代码要交接给你。你发现代码写得乱七八糟，几乎没法维护。",
+    "weight": 65,
+    "condition": null,
+    "options": [
+      {
+        "text": "A. 慢慢修复",
+        "effects": [
+          {
+            "type": "ENERGY",
+            "value": -30
+          },
+          {
+            "type": "KPI",
+            "value": 10
+          }
+        ],
+        "log": "[COMMIT] 你花了半个月逐步重构了代码，整个模块变得可读、可维护了。"
+      },
+      {
+        "text": "B. 直接重写",
+        "effects": [
+          {
+            "type": "ENERGY",
+            "value": -40
+          },
+          {
+            "type": "KPI",
+            "value": 20
+          }
+        ],
+        "log": "[COMMIT] 你决定直接重写这个模块，花了一个月完成了重写。虽然累但值得。"
+      }
+    ]
+  },
+  {
+    "id": "EV_053",
+    "title": "新项目技术栈冲突",
+    "description": "新项目你们想用 Vue 3，但团队里已经有很多人是用 React 的。你要决定技术栈。",
+    "weight": 70,
+    "condition": null,
+    "options": [
+      {
+        "text": "A. 坚持 Vue 3",
+        "effects": [
+          {
+            "type": "KPI",
+            "value": 15
+          },
+          {
+            "type": "SUSPICION",
+            "value": 10
+          }
+        ],
+        "log": "[COMMIT] 你说 Vue 3 更快上手，大部分新功能更快落地。虽然有一些人不太习惯。"
+      },
+      {
+        "text": "B. 妥协使用 React",
+        "effects": [
+          {
+            "type": "SUSPICION",
+            "value": -10
+          }
+        ],
+        "log": "[INFO] 你说 React 生态更强大，大家学了也能通用。团队同意用 React。"
+      }
+    ]
+  },
+  {
+    "id": "EV_054",
+    "title": "紧急性能优化",
+    "description": "测试反馈你们的新功能响应慢，你们必须在今天找出原因并优化。",
+    "weight": 85,
+    "highRisk": true,
+    "condition": null,
+    "options": [
+      {
+        "text": "A. 通宵优化",
+        "effects": [
+          {
+            "type": "ENERGY",
+            "value": -35
+          },
+          {
+            "type": "KPI",
+            "value": 20
+          }
+        ],
+        "log": "[BUGFIX] 你连夜优化了 SQL 和索引，第二天性能提升了 3 倍。测试组很满意。"
+      },
+      {
+        "text": "B. 说等下个版本",
+        "effects": [
+          {
+            "type": "KPI",
+            "value": -15
+          },
+          {
+            "type": "SUSPICION",
+            "value": 20
+          }
+        ],
+        "log": "[ALERT] 你说性能没问题，优化放到下个版本。产品说不行。"
+      }
+    ]
+  },
+  {
+    "id": "EV_055",
+    "title": "临时被派去测试",
+    "description": "测试人力不足，领导安排你去帮忙做测试。你本身就忙，还要多做测试任务。",
+    "weight": 50,
+    "condition": null,
+    "options": [
+      {
+        "text": "A. 接受任务",
+        "effects": [
+          {
+            "type": "ENERGY",
+            "value": -20
+          },
+          {
+            "type": "KPI",
+            "value": 5
+          }
+        ],
+        "log": "[COMMIT] 你这周白天写代码，晚上做测试。最终项目准时上线。"
+      },
+      {
+        "text": "B. 说没时间",
+        "effects": [
+          {
+            "type": "SUSPICION",
+            "value": 15
+          }
+        ],
+        "log": "[WARNING] 你说你的时间都满了。领导说：'那你先把测试部分的优先级调低。'你明白了。"
+      }
+    ]
+  },
+  {
+    "id": "EV_056",
+    "title": "线上误操作恢复",
+    "description": "你的同事在线上误操作删除了一个表，现在要恢复，你作为前端被拉进去排查。",
+    "weight": 90,
+    "highRisk": true,
+    "condition": null,
+    "options": [
+      {
+        "text": "A. 协助恢复",
+        "effects": [
+          {
+            "type": "ENERGY",
+            "value": -30
+          },
+          {
+            "type": "KPI",
+            "value": 15
+          }
+        ],
+        "log": "[BUGFIX] 你帮数据组梳理了整个流程，恢复了数据。虽然你那天加班了 4 小时。"
+      },
+      {
+        "text": "B. 说是后端问题",
+        "effects": [
+          {
+            "type": "SUSPICION",
+            "value": 15
+          }
+        ],
+        "log": "[ALERT] 你说这个和前端无关。最后大家都很累，结果还是修复好了。"
+      }
+    ]
+  },
+  {
+    "id": "EV_057",
+    "title": "客户临时提出需求",
+    "description": "客户现场演示时提出新需求，要求必须在这个周内上线。你需要决定是否接受。",
+    "weight": 80,
+    "condition": null,
+    "options": [
+      {
+        "text": "A. 立即承诺",
+        "effects": [
+          {
+            "type": "ENERGY",
+            "value": -40
+          },
+          {
+            "type": "KPI",
+            "value": 25
+          }
+        ],
+        "log": "[COMMIT] 你当场承诺，然后加班了一周，最终成功上线。客户很满意。"
+      },
+      {
+        "text": "B. 说明困难",
+        "effects": [
+          {
+            "type": "KPI",
+            "value": 5
+          },
+          {
+            "type": "SUSPICION",
+            "value": 15
+          }
+        ],
+        "log": "[INFO] 你说这个需求要排期。客户不太满意，但还是接受了。"
+      }
+    ]
+  },
+  {
+    "id": "EV_058",
+    "title": "团队内部资源争夺",
+    "description": "你和其他团队有资源不一致的冲突，领导要你开会协商出最终方案。",
+    "weight": 70,
+    "condition": null,
+    "options": [
+      {
+        "text": "A. 强势逼退",
+        "effects": [
+          {
+            "type": "KPI",
+            "value": 15
+          },
+          {
+            "type": "SUSPICION",
+            "value": 10
+          }
+        ],
+        "log": "[ALERT] 你说资源只能给你，他们要不就只能等下个季度。最终他们妥协了。"
+      },
+      {
+        "text": "B. 合作分工",
+        "effects": [
+          {
+            "type": "KPI",
+            "value": 10
+          },
+          {
+            "type": "SUSPICION",
+            "value": -5
+          }
+        ],
+        "log": "[COMMIT] 你建议双方合作，按照模块来分工。双方领导都同意了，项目迅速推进。"
+      }
+    ]
+  },
+  {
+    "id": "EV_059",
+    "title": "代码严重破坏",
+    "description": "你在本地修改了一个大模块，结果没有备份，重启后发现所有代码都丢失了。",
+    "weight": 75,
+    "highRisk": true,
+    "condition": null,
+    "options": [
+      {
+        "text": "A. 从 Git 恢复",
+        "effects": [
+          {
+            "type": "ENERGY",
+            "value": -20
+          },
+          {
+            "type": "KPI",
+            "value": 5
+          }
+        ],
+        "log": "[COMMIT] 你查了 Git 的历史提交，找到了最近的版本，恢复了所有代码。"
+      },
+      {
+        "text": "B. 重新写一遍",
+        "effects": [
+          {
+            "type": "ENERGY",
+            "value": -40
+          },
+          {
+            "type": "KPI",
+            "value": -10
+          }
+        ],
+        "log": "[COMMIT] 你说这个不能恢复，只好重新写。你花了 3 天终于写完了，但是 KPI 跌了。"
+      }
+    ]
+  },
+  {
+    "id": "EV_060",
+    "title": "需求临时妥协",
+    "description": "产品提出一个几乎不可能实现的需求，你建议使用替代方案。",
+    "weight": 70,
+    "condition": null,
+    "options": [
+      {
+        "text": "A. 说服产品用替代方案",
+        "effects": [
+          {
+            "type": "KPI",
+            "value": 15
+          },
+          {
+            "type": "SUSPICION",
+            "value": -5
+          }
+        ],
+        "log": "[COMMIT] 你做了一个技术方案对比 PPT 说服了产品采用替代方案，需求更快落地了。"
+      },
+      {
+        "text": "B. 接受需求写完",
+        "effects": [
+          {
+            "type": "ENERGY",
+            "value": -35
+          },
+          {
+            "type": "KPI",
+            "value": 20
+          }
+        ],
+        "log": "[COMMIT] 你答应了这个需求，加班加点完成了。结果上线后发现用户不喜欢。"
+      }
+    ]
+  },
+  {
+    "id": "EV_061",
+    "title": "致命的 CSS 绝对居中",
+    "description": "产品经理在群里@你：'登录页的 logo 没居中，移动端偏了 3px，P0 级 bug，立刻修！' 你深吸一口气，打开了浏览器的 DevTools。",
+    "weight": 100,
+    "highRisk": false,
+    "condition": null,
+    "options": [
+      { "text": "A. 尝试居中", "effects": [], "log": "[INFO] QTE" },
+      { "text": "B. Flexbox 一把梭", "effects": [], "log": "[INFO] QTE" }
+    ],
+    "qteConfig": {
+      "speedBase": 50, "speedSuspicionScale": 0.8,
+      "timeLimitMs": 10000, "timeLimitSuspicionReduce": 25,
+      "perfectThreshold": 8, "goodThreshold": 24,
+      "tauntPool": [
+        "Margin is not your friend.",
+        "left: 50%? 你认真的？",
+        "连 Flexbox 都救不了你。",
+        "这偏移量…你以前写过 CSS 吗？",
+        "transform: translateY(裁员名单)"
+      ],
+      "effects": {
+        "perfect": { "ENERGY": 0, "KPI": 12, "INTERVIEW": 0, "SUSPICION": -5 },
+        "good": { "ENERGY": 0, "KPI": 6, "INTERVIEW": 0, "SUSPICION": 0 },
+        "miss": { "ENERGY": -5, "KPI": -8, "INTERVIEW": 0, "SUSPICION": 5 }
+      }
+    }
+  },
+  {
+    "id": "EV_062",
+    "title": "垂直居中难题",
+    "description": "设计师甩来一张 UI 稿：'这个弹窗要水平垂直居中，且支持动态内容高度。'",
+    "weight": 90,
+    "highRisk": false,
+    "condition": { "minDay": 8 },
+    "options": [
+      { "text": "A. Grid 大法", "effects": [], "log": "[INFO] QTE" },
+      { "text": "B. 老办法 margin:auto", "effects": [], "log": "[INFO] QTE" }
+    ],
+    "qteConfig": {
+      "speedBase": 55, "speedSuspicionScale": 0.8,
+      "timeLimitMs": 9500, "timeLimitSuspicionReduce": 25,
+      "perfectThreshold": 8, "goodThreshold": 24,
+      "tauntPool": [
+        "垂直居中…前端永恒的痛。",
+        "line-height 居然没生效？",
+        "试试 place-items: center？哦你忘了 Grid。",
+        "你确定这不是个 padding 问题？"
+      ],
+      "effects": {
+        "perfect": { "ENERGY": 0, "KPI": 14, "INTERVIEW": 0, "SUSPICION": -5 },
+        "good": { "ENERGY": 0, "KPI": 7, "INTERVIEW": 0, "SUSPICION": 0 },
+        "miss": { "ENERGY": -5, "KPI": -9, "INTERVIEW": 0, "SUSPICION": 5 }
+      }
+    }
+  },
+  {
+    "id": "EV_063",
+    "title": "IE 兼容地狱",
+    "description": "测试提了一个 bug：你刚做的布局在 IE11 上完全炸了。老板：'客户还在用 IE，适配一下。'",
+    "weight": 80,
+    "highRisk": true,
+    "condition": { "minDay": 15 },
+    "options": [
+      { "text": "A. 手写兼容代码", "effects": [], "log": "[INFO] QTE" },
+      { "text": "B. Polyfill 引入", "effects": [], "log": "[INFO] QTE" }
+    ],
+    "qteConfig": {
+      "speedBase": 60, "speedSuspicionScale": 1.0,
+      "timeLimitMs": 9000, "timeLimitSuspicionReduce": 30,
+      "perfectThreshold": 8, "goodThreshold": 24,
+      "tauntPool": [
+        "IE11: 你写的是 CSS 还是梵文？",
+        "float: left 在 IE 下跑了 300px。",
+        "连 -ms-grid 都没写，怪谁呢。"
+      ],
+      "effects": {
+        "perfect": { "ENERGY": 0, "KPI": 16, "INTERVIEW": 0, "SUSPICION": -8 },
+        "good": { "ENERGY": 0, "KPI": 8, "INTERVIEW": 0, "SUSPICION": 0 },
+        "miss": { "ENERGY": -8, "KPI": -12, "INTERVIEW": 0, "SUSPICION": 8 }
+      }
+    }
+  },
+  {
+    "id": "EV_064",
+    "title": "响应式断点危机",
+    "description": "运营反馈：iPad 竖屏下你的页面导航栏把内容区挤到只剩 200px。",
+    "weight": 85,
+    "highRisk": false,
+    "condition": { "minDay": 20 },
+    "options": [
+      { "text": "A. 重新设计 Grid", "effects": [], "log": "[INFO] QTE" },
+      { "text": "B. 加个横向滚动", "effects": [], "log": "[INFO] QTE" }
+    ],
+    "qteConfig": {
+      "speedBase": 65, "speedSuspicionScale": 1.0,
+      "timeLimitMs": 8500, "timeLimitSuspicionReduce": 30,
+      "perfectThreshold": 8, "goodThreshold": 24,
+      "tauntPool": [
+        "@media (min-width: 绝望) { display: none; }",
+        "你的断点比碎玻璃还碎。",
+        "你听过 container queries 吗？哦，兼容性不行。"
+      ],
+      "effects": {
+        "perfect": { "ENERGY": 0, "KPI": 15, "INTERVIEW": 0, "SUSPICION": -6 },
+        "good": { "ENERGY": 0, "KPI": 7, "INTERVIEW": 0, "SUSPICION": 0 },
+        "miss": { "ENERGY": -6, "KPI": -10, "INTERVIEW": 0, "SUSPICION": 6 }
+      }
+    }
+  },
+  {
+    "id": "EV_065",
+    "title": "z-index 层叠战争",
+    "description": "多层级弹窗 z-index: 9999 已经不管用了。第三个弹窗被第二个盖住，第二个又被 sidebar 盖了。",
+    "weight": 75,
+    "highRisk": true,
+    "condition": { "minDay": 22, "minSuspicion": 50 },
+    "options": [
+      { "text": "A. 重构层级体系", "effects": [], "log": "[INFO] QTE" },
+      { "text": "B. z-index: 2147483647", "effects": [], "log": "[INFO] QTE" }
+    ],
+    "qteConfig": {
+      "speedBase": 70, "speedSuspicionScale": 1.2,
+      "timeLimitMs": 8000, "timeLimitSuspicionReduce": 35,
+      "perfectThreshold": 8, "goodThreshold": 24,
+      "tauntPool": [
+        "z-index: 9999 是你最后的倔强。",
+        "stacking context 搞明白了吗？",
+        "你把 z-index 当计数器用是吧。"
+      ],
+      "effects": {
+        "perfect": { "ENERGY": 0, "KPI": 18, "INTERVIEW": 0, "SUSPICION": -8 },
+        "good": { "ENERGY": 0, "KPI": 9, "INTERVIEW": 0, "SUSPICION": 0 },
+        "miss": { "ENERGY": -8, "KPI": -12, "INTERVIEW": 0, "SUSPICION": 8 }
+      }
+    }
+  }
+]

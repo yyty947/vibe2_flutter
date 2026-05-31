@@ -1,0 +1,5 @@
+event.wav - Message Notification 4 by AnthonyRox -- https://freesound.org/s/740423/ -- License: Creative Commons 0
+click.ogg - Keyboard_Tactile_9 by StavSounds -- https://freesound.org/s/766640/ -- License: Creative Commons 0
+glitch.wav - hit_002.wav by leviclaassen -- https://freesound.org/s/107789/ -- License: Attribution 4.0
+success.wav - Powerup/success.wav by GabrielAraujo -- https://freesound.org/s/242501/ -- License: Creative Commons 0
+alert.wav - windows-like physical modeled alert sound original 2 [Oneshot] {Render as Loop}.wav by Heshl -- https://freesound.org/s/269162/ -- License: Attribution 3.0

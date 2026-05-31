@@ -1,0 +1,98 @@
+[
+  {
+    "id": "WRITE_CODE",
+    "label": "写业务代码",
+    "effects": { "energy": -10, "kpi": 5, "interview": 0, "suspicion": -2 },
+    "prerequisite": null,
+    "log": "[COMMIT] 提交了3个PR，绩效微升，老板觉得你很安分。",
+    "core": true
+  },
+  {
+    "id": "FIX_BUG",
+    "label": "修屎山Bug",
+    "effects": { "energy": -20, "kpi": 15, "interview": 0, "suspicion": 0 },
+    "prerequisite": { "field": "energy", "operator": ">", "value": 20 },
+    "log": "[BUGFIX] 解决了陈年老Bug，虽然心力交瘁，但在周报上大放异彩。",
+    "core": true
+  },
+  {
+    "id": "STUDY",
+    "label": "偷偷刷八股文",
+    "effects": { "energy": -10, "kpi": 0, "interview": 8, "suspicion": 5 },
+    "prerequisite": null,
+    "log": "[STUDY] 刷了5道Hard题。你频繁切屏引起了主管的注意。",
+    "core": true
+  },
+  {
+    "id": "SLACK",
+    "label": "带薪拉屎",
+    "effects": { "energy": 20, "kpi": 0, "interview": 0, "suspicion": 3 },
+    "prerequisite": null,
+    "log": "[SLACK] 在厕所隔间冥想了半小时，血条恢复了！",
+    "core": true
+  },
+  {
+    "id": "MENTOR",
+    "label": "帮助新人",
+    "effects": { "energy": -15, "kpi": 10, "interview": 0, "suspicion": -5 },
+    "prerequisite": null,
+    "log": "[COMMIT] 耐心解答了新同事的TS泛型问题，他在群里感谢了你。",
+    "condition": { "minDay": 3, "minKpi": 40 }
+  },
+  {
+    "id": "REFACTOR",
+    "label": "优化重构",
+    "effects": { "energy": -30, "kpi": 20, "interview": 0, "suspicion": -2 },
+    "prerequisite": null,
+    "log": "[COMMIT] 把祖传代码拆成了5个职责清晰的模块。Code Review一次过。",
+    "condition": { "minKpi": 50 }
+  },
+  {
+    "id": "BLOG",
+    "label": "写技术博客",
+    "effects": { "energy": -10, "kpi": 5, "interview": 8, "suspicion": 0 },
+    "prerequisite": null,
+    "log": "[STUDY] 整理了这周的技术积累，写了篇博客发在掘金。既练手又攒口碑。",
+    "condition": { "weekendOnly": true }
+  },
+  {
+    "id": "TECH_TALK",
+    "label": "参加技术分享",
+    "effects": { "energy": -5, "kpi": 0, "interview": 10, "suspicion": 0 },
+    "prerequisite": null,
+    "log": "[STUDY] 听了隔壁组的微前端实践分享，记了满满三页笔记。",
+    "condition": { "minDay": 8 }
+  },
+  {
+    "id": "BROWSE",
+    "label": "摸鱼刷知乎",
+    "effects": { "energy": 10, "kpi": 0, "interview": 0, "suspicion": 1 },
+    "prerequisite": null,
+    "log": "[SLACK] 刷了半小时知乎热榜，看到一堆裁员帖，又焦虑又放松。",
+    "condition": {}
+  },
+  {
+    "id": "OVERTIME",
+    "label": "加班赶需求",
+    "effects": { "energy": -35, "kpi": 25, "interview": 0, "suspicion": -3 },
+    "prerequisite": { "field": "energy", "operator": ">", "value": 40 },
+    "log": "[COMMIT] 你一个人在空荡荡的办公室里敲到晚上十点，提了6个PR。KPI飙升但身体在报警。",
+    "condition": { "maxKpi": 80 }
+  },
+  {
+    "id": "ARCH_REDESIGN",
+    "label": "架构重构",
+    "effects": { "energy": -40, "kpi": 30, "interview": 5, "suspicion": -10 },
+    "prerequisite": { "field": "energy", "operator": ">", "value": 45 },
+    "log": "[COMMIT] 你主导了一次底层架构迁移。整个组都对你刮目相看。",
+    "condition": { "requiresSkill": "TECH_T3" }
+  },
+  {
+    "id": "ALLIANCE",
+    "label": "拉帮结派",
+    "effects": { "energy": -10, "kpi": -5, "interview": 0, "suspicion": -20 },
+    "prerequisite": null,
+    "log": "[INFO] 你约了几个关系好的同事一起吐槽公司，大家心照不宣地互相罩着。怀疑度大降。",
+    "condition": { "requiresSkill": "SOCIAL_T3" }
+  }
+]

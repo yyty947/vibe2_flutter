@@ -1,0 +1,47 @@
+name: frontend_survival
+description: "前端生死劫 — Flutter Edition"
+publish_to: 'none'
+version: 1.3.0+1
+
+environment:
+  sdk: ^3.11.5
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # State management
+  flutter_riverpod: ^2.6.1
+
+  # Routing
+  go_router: ^14.8.1
+
+  # Persistence (localStorage equivalent)
+  shared_preferences: ^2.3.4
+
+  # Icons (Lucide React equivalent)
+  lucide_icons: ^0.257.0
+
+  # Fonts (Share Tech Mono + Fira Code)
+  google_fonts: ^6.2.1
+
+  # Audio (Howler.js equivalent)
+  audioplayers: ^6.1.0
+
+  # Video playback (intro video)
+  video_player: ^2.9.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/data/
+    - assets/backgrounds/
+    - assets/audio/bgm/
+    - assets/audio/sfx/
+    - assets/video/

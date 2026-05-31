@@ -1,0 +1,139 @@
+[
+  {
+    "id": "ENERGY_T1",
+    "name": "精力管理 I",
+    "branch": "energy",
+    "tier": 1,
+    "cost": 3,
+    "requires": null,
+    "effects": { "energyCostMultiplier": -0.10 },
+    "icon": "BatteryMedium",
+    "description": "学会用番茄钟管理精力，所有行动的精力消耗降低 10%。"
+  },
+  {
+    "id": "ENERGY_T2",
+    "name": "精力管理 II",
+    "branch": "energy",
+    "tier": 2,
+    "cost": 5,
+    "requires": "ENERGY_T1",
+    "effects": { "slackEnergyBoost": 5 },
+    "icon": "BatteryFull",
+    "description": "掌握了高效摸鱼的艺术。带薪拉屎恢复的精力额外 +5。"
+  },
+  {
+    "id": "ENERGY_T3",
+    "name": "精力管理 III",
+    "branch": "energy",
+    "tier": 3,
+    "cost": 8,
+    "requires": "ENERGY_T2",
+    "effects": {},
+    "icon": "BatteryCharging",
+    "description": "内功大成。解锁隐藏事件'午间小憩'——偶尔在午后获得免费精力恢复。",
+    "unlocksEvent": "HIDDEN_NAP"
+  },
+  {
+    "id": "TECH_T1",
+    "name": "代码效率 I",
+    "branch": "tech",
+    "tier": 1,
+    "cost": 3,
+    "requires": null,
+    "effects": { "kpiGainMultiplier": 0.10 },
+    "icon": "Code2",
+    "description": "你的代码质量开始被注意到。所有 KPI 收益 +10%。"
+  },
+  {
+    "id": "TECH_T2",
+    "name": "代码效率 II",
+    "branch": "tech",
+    "tier": 2,
+    "cost": 5,
+    "requires": "TECH_T1",
+    "effects": { "writeCodeEnergyDiscount": 5 },
+    "icon": "TerminalSquare",
+    "description": "写业务代码对你来说已是肌肉记忆。写业务代码的精力消耗 -5。"
+  },
+  {
+    "id": "TECH_T3",
+    "name": "代码效率 III",
+    "branch": "tech",
+    "tier": 3,
+    "cost": 8,
+    "requires": "TECH_T2",
+    "effects": {},
+    "icon": "Cpu",
+    "description": "你有资格碰核心架构了。解锁新行动'架构重构'——高投入高回报的工作选项。",
+    "unlocksAction": "ARCH_REDESIGN"
+  },
+  {
+    "id": "SOCIAL_T1",
+    "name": "社交技巧 I",
+    "branch": "social",
+    "tier": 1,
+    "cost": 3,
+    "requires": null,
+    "effects": { "suspicionGainMultiplier": -0.10 },
+    "icon": "MessageCircle",
+    "description": "你学会在合适的时机和同事聊两句。怀疑度增长速度 -10%。"
+  },
+  {
+    "id": "SOCIAL_T2",
+    "name": "社交技巧 II",
+    "branch": "social",
+    "tier": 2,
+    "cost": 5,
+    "requires": "SOCIAL_T1",
+    "effects": {},
+    "icon": "Users",
+    "description": "你开始懂得团队政治。结算时可以选择消耗 3 成长点来降低 10 点怀疑度。",
+    "enablesAction": "REDUCE_SUSPICION"
+  },
+  {
+    "id": "SOCIAL_T3",
+    "name": "社交技巧 III",
+    "branch": "social",
+    "tier": 3,
+    "cost": 8,
+    "requires": "SOCIAL_T2",
+    "effects": {},
+    "icon": "HeartHandshake",
+    "description": "你是团队的气氛调节剂。解锁新行动'拉帮结派'——大幅降低怀疑度。",
+    "unlocksAction": "ALLIANCE"
+  },
+  {
+    "id": "INTERVIEW_T1",
+    "name": "面试精进 I",
+    "branch": "interview",
+    "tier": 1,
+    "cost": 3,
+    "requires": null,
+    "effects": { "interviewGainMultiplier": 0.10 },
+    "icon": "BookOpen",
+    "description": "开始系统性地准备面试。面试准备度收益 +10%。"
+  },
+  {
+    "id": "INTERVIEW_T2",
+    "name": "面试精进 II",
+    "branch": "interview",
+    "tier": 2,
+    "cost": 5,
+    "requires": "INTERVIEW_T1",
+    "effects": { "studySuspicionDiscount": 3 },
+    "icon": "BookMarked",
+    "description": "你学会了更隐蔽的刷题方式。偷偷刷八股文的怀疑度增长 -3。"
+  },
+  {
+    "id": "INTERVIEW_T3",
+    "name": "面试精进 III",
+    "branch": "interview",
+    "tier": 3,
+    "cost": 8,
+    "requires": "INTERVIEW_T2",
+    "effects": {},
+    "icon": "Rocket",
+    "description": "你在猎头圈子里有了名声。解锁隐藏事件'猎头主动上门'——免费的面试度提升。",
+    "unlocksEvent": "HIDDEN_HEADHUNTER"
+  }
+]

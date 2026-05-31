@@ -1,0 +1,74 @@
+[
+  {
+    "id": "INT_CRASH",
+    "title": "线上崩了",
+    "description": "你正准备开始下午的工作，手机疯狂震动——生产环境挂了。所有人被拉进战时群，你必须立刻排查问题。",
+    "effects": { "energy": -25, "kpi": 15, "suspicion": -5 },
+    "log": "[ALERT] 你花了整个下午排查线上故障，终于在晚饭前修好了。绩效涨了，但人也快废了。",
+    "minDay": 1,
+    "weekendExcluded": false
+  },
+  {
+    "id": "INT_HR_CALL",
+    "title": "HR 临时约谈",
+    "description": "飞书突然弹出一条消息：'方便来下 3 号会议室吗？就十分钟。'你心里咯噔一下，下午的计划全乱了。",
+    "effects": { "energy": -10, "interview": -10, "suspicion": 10 },
+    "log": "[WARNING] HR 和你的 leader 坐在会议室里，聊了聊'组织调整'。你走出会议室时脸色发白。",
+    "minDay": 5,
+    "weekendExcluded": true
+  },
+  {
+    "id": "INT_URGENT_MEETING",
+    "title": "紧急全员会",
+    "description": "总监突然拉了一个全员会议：'所有人放下手头工作，五分钟后大会议室集合。'下午的时间被吞掉了。",
+    "effects": { "energy": -5, "suspicion": 5 },
+    "log": "[INFO] 一个小时的会，核心内容是'我们要更有 Owner 意识'。你下午的安排泡汤了。",
+    "minDay": 1,
+    "weekendExcluded": false
+  },
+  {
+    "id": "INT_BUG_HUNT",
+    "title": "遗留 Bug 爆炸",
+    "description": "测试群炸了——你上周提交的代码有个边界情况没覆盖，QA 要求必须在今天下班前修复。",
+    "effects": { "energy": -20, "kpi": 10, "suspicion": 5 },
+    "log": "[BUGFIX] 你找了一个下午终于定位到那个野指针，修完已经快七点了。KPI 涨了点，但你很想骂人。",
+    "minDay": 3,
+    "weekendExcluded": false
+  },
+  {
+    "id": "INT_PM_PRESS",
+    "title": "产品经理压需求",
+    "description": "产品经理抱着笔记本坐到你的工位旁边：'这个需求今天必须交，老板明天要演示。'你看着还没开始写的代码，下午没了。",
+    "effects": { "energy": -30, "kpi": 20, "suspicion": -10 },
+    "log": "[COMMIT] 你在产品经理的注视下疯狂写代码。交完需求那一刻，你感觉身体被掏空。",
+    "minDay": 1,
+    "weekendExcluded": false
+  },
+  {
+    "id": "INT_FIRE_DRILL",
+    "title": "消防演习",
+    "description": "整栋楼的消防警报响了——所有人必须下楼集合。虽然是演习，但折腾了整整两小时。",
+    "effects": { "energy": -5 },
+    "log": "[INFO] 你在楼下站了一个半小时，刷了会儿手机。下午的计划搁浅了。",
+    "minDay": 1,
+    "weekendExcluded": false
+  },
+  {
+    "id": "INT_LEADER_ONE_ON_ONE",
+    "title": "Leader 临时 1v1",
+    "description": "你的 Leader 突然说想和你聊聊：'最近状态怎么样？有没有什么想法？'你下午的安排被这次谈话取代了。",
+    "effects": { "energy": -10, "suspicion": -15 },
+    "log": "[INFO] 你和 Leader 坦诚聊了半小时，压力释放了一些，但你失去了半个下午。",
+    "minDay": 3,
+    "weekendExcluded": true
+  },
+  {
+    "id": "INT_HEADHUNTER_CALL",
+    "title": "猎头突然来电",
+    "description": "一个陌生号码打来，是某大厂的 HR：'看到你的简历了，方便现在简单聊聊吗？'你的下午被这次通话占据了。",
+    "effects": { "interview": 15, "suspicion": 10, "energy": 5 },
+    "log": "[STUDY] 你和猎头聊了四十分钟，对方对你很感兴趣。面试度涨了，但你也更心神不宁了。",
+    "minDay": 8,
+    "weekendExcluded": false
+  }
+]

@@ -1,0 +1,152 @@
+[
+  {
+    "id": "TRUSTED",
+    "name": "老板信任",
+    "type": "buff",
+    "priority": 1,
+    "triggers": [
+      { "stat": "suspicion", "operator": "<=", "value": 25 }
+    ],
+    "effects": {
+      "kpiGainMultiplier": 0.20,
+      "suspicionGainMultiplier": -0.30
+    },
+    "icon": "ShieldCheck",
+    "tooltip": {
+      "title": "老板信任",
+      "effect": "KPI 收益 +20% · 怀疑度增长 -30%",
+      "flavor": "你最近表现得很安分，老板对你放下了戒心。"
+    }
+  },
+  {
+    "id": "ENERGIZED",
+    "name": "精力充沛",
+    "type": "buff",
+    "priority": 1,
+    "triggers": [
+      { "stat": "energy", "operator": ">=", "value": 80 }
+    ],
+    "effects": {
+      "energyCostMultiplier": -0.20
+    },
+    "icon": "Zap",
+    "tooltip": {
+      "title": "精力充沛",
+      "effect": "精力消耗 -20%",
+      "flavor": "你今天状态极佳，写代码像喝水一样顺畅。"
+    }
+  },
+  {
+    "id": "CORE_MEMBER",
+    "name": "核心骨干",
+    "type": "buff",
+    "priority": 1,
+    "triggers": [
+      { "stat": "kpi", "operator": ">=", "value": 75 }
+    ],
+    "effects": {
+      "kpiGainMultiplier": 0.25
+    },
+    "icon": "Star",
+    "tooltip": {
+      "title": "核心骨干",
+      "effect": "KPI 收益 +25%",
+      "flavor": "你的绩效名列前茅，领导在周会上点名表扬了你。"
+    }
+  },
+  {
+    "id": "IN_THE_ZONE",
+    "name": "如鱼得水",
+    "type": "buff",
+    "priority": 2,
+    "triggers": [
+      { "stat": "kpi", "operator": ">=", "value": 65 },
+      { "stat": "energy", "operator": ">=", "value": 60 },
+      { "stat": "suspicion", "operator": "<=", "value": 35 }
+    ],
+    "effects": {
+      "allGainMultiplier": 0.15
+    },
+    "icon": "Crown",
+    "tooltip": {
+      "title": "如鱼得水",
+      "effect": "所有收益 +15%",
+      "flavor": "绩效扎实、精力在线、老板放心——你现在是团队的定海神针。"
+    }
+  },
+  {
+    "id": "TRUST_CRISIS",
+    "name": "信任危机",
+    "type": "debuff",
+    "priority": 1,
+    "triggers": [
+      { "stat": "suspicion", "operator": ">=", "value": 65 }
+    ],
+    "effects": {
+      "kpiGainMultiplier": -0.25
+    },
+    "icon": "EyeOff",
+    "tooltip": {
+      "title": "信任危机",
+      "effect": "KPI 收益 -25%",
+      "flavor": "老板开始怀疑你是不是在偷偷找工作，你的每行代码都被审视。"
+    }
+  },
+  {
+    "id": "UNDER_SURVEIL",
+    "name": "严密监控",
+    "type": "debuff",
+    "priority": 2,
+    "triggers": [
+      { "stat": "suspicion", "operator": ">=", "value": 85 }
+    ],
+    "effects": {
+      "interviewGainMultiplier": -0.30,
+      "suspicionGainMultiplier": 0.30
+    },
+    "icon": "ShieldAlert",
+    "tooltip": {
+      "title": "严密监控",
+      "effect": "面试收益 -30% · 怀疑度增长 +30%",
+      "flavor": "HR 和 Leader 都在盯着你，你连切屏看面经都要犹豫半天。"
+    }
+  },
+  {
+    "id": "BURNOUT",
+    "name": "精神透支",
+    "type": "debuff",
+    "priority": 1,
+    "triggers": [
+      { "stat": "energy", "operator": "<=", "value": 25 }
+    ],
+    "effects": {
+      "kpiGainMultiplier": -0.30,
+      "energyCostMultiplier": 0.30
+    },
+    "icon": "BatteryWarning",
+    "tooltip": {
+      "title": "精神透支",
+      "effect": "KPI 收益 -30% · 精力消耗 +30%",
+      "flavor": "你已经累到眼皮打架，写的代码全是一坨山。效率直线下降。"
+    }
+  },
+  {
+    "id": "COLLAPSE",
+    "name": "身心崩溃",
+    "type": "debuff",
+    "priority": 2,
+    "triggers": [
+      { "stat": "energy", "operator": "<=", "value": 15 }
+    ],
+    "effects": {
+      "allGainMultiplier": -0.20,
+      "energyCostMultiplier": 0.50
+    },
+    "icon": "HeartCrack",
+    "tooltip": {
+      "title": "身心崩溃",
+      "effect": "所有收益 -20% · 精力消耗 +50%",
+      "flavor": "你的身体在发出红色警报。再不止损，ICU 就在前方。"
+    }
+  }
+]
