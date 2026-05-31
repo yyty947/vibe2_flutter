@@ -312,7 +312,7 @@ Changes in these areas require extra caution and broader validation:
 | ID | Source | Status | Description |
 |----|--------|--------|-------------|
 | Patch-006 | DOC_AUDIT.md | **Mitigated** | Numerical balance: pure "study + slack" rotation reaching interview >= 80 too quickly. Partially mitigated by F04 (streak penalty + spot check) and F02 (suspicion gate on GE_OFFER). Remaining risk: exact balance needs playtest validation. |
-| Title version | Code | **Fixed** | `title_screen.dart` now shows v1.3.0 matching `GameState.gameVersion`. |
+| Title version | Code | **Fixed** | `title_screen.dart` now shows v2.0.0 matching `GameState.gameVersion`. |
 | Audio files | Assets | **Fixed** | BGM (3 mp3) and SFX (5 ogg/wav) files present in `assets/audio/`. AudioManager fully functional. |
 | Launcher identity | Android | **Fixed** | Launcher label is `Frontend Survival`; mipmap launcher icons are generated from `tmp_icon/icon.png`. |
 

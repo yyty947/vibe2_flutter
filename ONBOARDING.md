@@ -18,7 +18,7 @@
 
 - 平台：Flutter Android，横屏锁定，纯客户端，无后端和账号。
 - 启动器名称：`Frontend Survival`。
-- 版本：`pubspec.yaml` 为 `1.3.0+1`；存档版本为 `GameState.gameVersion == 1.3.0`。
+- 版本：`pubspec.yaml` 为 `2.0.0+2`；存档版本为 `GameState.gameVersion == 2.0.0`。
 - 存档：`SharedPreferences`，固定 key `frontend-survival-save`。
 - 数据：`GameData.init()` 加载 10 个 JSON 文件，预加载 8 张背景图。
 - 玩法内容：12 个行动、65 个事件、14 个高危事件、5 个 QTE 事件、8 个状态条件、12 个技能、12 个日间修饰符、8 个打断事件、6 个压力事件。

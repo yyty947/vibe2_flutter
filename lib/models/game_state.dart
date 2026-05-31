@@ -80,7 +80,7 @@ class GameState {
     this.showIntroVideo = false,
   });
 
-  static const String gameVersion = '1.3.0';
+  static const String gameVersion = '2.0.0';
 
   /// Fresh game initial state (TECH_ARCH §2.2).
   static const GameState initial = GameState(
@@ -130,11 +130,19 @@ class GameState {
       version: version ?? this.version,
       savedAt: savedAt ?? this.savedAt,
       actionStats: actionStats ?? this.actionStats,
-      currentEventId: identical(currentEventId, _sentinel) ? this.currentEventId : currentEventId as String?,
+      currentEventId: identical(currentEventId, _sentinel)
+          ? this.currentEventId
+          : currentEventId as String?,
       ending: identical(ending, _sentinel) ? this.ending : ending as String?,
-      dayModifier: identical(dayModifier, _sentinel) ? this.dayModifier : dayModifier as String?,
-      interruption: identical(interruption, _sentinel) ? this.interruption : interruption as String?,
-      suspicionPressure: identical(suspicionPressure, _sentinel) ? this.suspicionPressure : suspicionPressure as String?,
+      dayModifier: identical(dayModifier, _sentinel)
+          ? this.dayModifier
+          : dayModifier as String?,
+      interruption: identical(interruption, _sentinel)
+          ? this.interruption
+          : interruption as String?,
+      suspicionPressure: identical(suspicionPressure, _sentinel)
+          ? this.suspicionPressure
+          : suspicionPressure as String?,
       activeStatuses: activeStatuses ?? this.activeStatuses,
       streakActionId: streakActionId ?? this.streakActionId,
       streakCount: streakCount ?? this.streakCount,
@@ -149,29 +157,29 @@ class GameState {
   static const _sentinel = Object();
 
   Map<String, dynamic> toJson() => {
-        'energy': energy,
-        'kpi': kpi,
-        'interview': interview,
-        'suspicion': suspicion,
-        'day': day,
-        'phase': phase.label,
-        'eventHistory': eventHistory,
-        'logs': logs.map((l) => l.toJson()).toList(),
-        'version': version,
-        'savedAt': savedAt,
-        'actionStats': actionStats.toJson(),
-        'currentEventId': currentEventId,
-        'ending': ending,
-        'dayModifier': dayModifier,
-        'interruption': interruption,
-        'suspicionPressure': suspicionPressure,
-        'activeStatuses': activeStatuses,
-        'streakActionId': streakActionId,
-        'streakCount': streakCount,
-        'skillPoints': skillPoints,
-        'skills': skills,
-        'showWeekReview': showWeekReview,
-      };
+    'energy': energy,
+    'kpi': kpi,
+    'interview': interview,
+    'suspicion': suspicion,
+    'day': day,
+    'phase': phase.label,
+    'eventHistory': eventHistory,
+    'logs': logs.map((l) => l.toJson()).toList(),
+    'version': version,
+    'savedAt': savedAt,
+    'actionStats': actionStats.toJson(),
+    'currentEventId': currentEventId,
+    'ending': ending,
+    'dayModifier': dayModifier,
+    'interruption': interruption,
+    'suspicionPressure': suspicionPressure,
+    'activeStatuses': activeStatuses,
+    'streakActionId': streakActionId,
+    'streakCount': streakCount,
+    'skillPoints': skillPoints,
+    'skills': skills,
+    'showWeekReview': showWeekReview,
+  };
 
   factory GameState.fromJson(Map<String, dynamic> json) {
     final phaseStr = json['phase'] as String? ?? 'TITLE';
@@ -181,9 +189,14 @@ class GameState {
       interview: json['interview'] as int? ?? 10,
       suspicion: json['suspicion'] as int? ?? 20,
       day: json['day'] as int? ?? 1,
-      phase: GamePhase.values.firstWhere((p) => p.label == phaseStr, orElse: () => GamePhase.title),
-      eventHistory: (json['eventHistory'] as List<dynamic>?)?.cast<String>() ?? [],
-      logs: (json['logs'] as List<dynamic>?)
+      phase: GamePhase.values.firstWhere(
+        (p) => p.label == phaseStr,
+        orElse: () => GamePhase.title,
+      ),
+      eventHistory:
+          (json['eventHistory'] as List<dynamic>?)?.cast<String>() ?? [],
+      logs:
+          (json['logs'] as List<dynamic>?)
               ?.map((l) => LogEntry.fromJson(l as Map<String, dynamic>))
               .toList() ??
           [],
@@ -197,7 +210,8 @@ class GameState {
       dayModifier: json['dayModifier'] as String?,
       interruption: json['interruption'] as String?,
       suspicionPressure: json['suspicionPressure'] as String?,
-      activeStatuses: (json['activeStatuses'] as List<dynamic>?)?.cast<String>() ?? [],
+      activeStatuses:
+          (json['activeStatuses'] as List<dynamic>?)?.cast<String>() ?? [],
       streakActionId: json['streakActionId'] as String? ?? '',
       streakCount: json['streakCount'] as int? ?? 0,
       skillPoints: json['skillPoints'] as int? ?? 0,

@@ -1,4 +1,4 @@
-> **摘要 (Abstract)**: 本文档定义了《前端生死劫》Flutter 版的技术实现标准与状态流转逻辑。核心采用 Flutter + Dart + Riverpod 的组合，实现纯客户端驱动的"状态机游戏"。文档锁定了完整的状态模型（v1.3.0，含技能系统、状态条件、连选惩罚等扩展）、游戏循环状态机（含打断/压力事件/周度复盘流程）、结局判定算法、事件抽取算法及存档架构，确保 AI 在生成功能逻辑时遵循统一的单向数据流与边界检查规则。最后更新：2026-05-03（Flutter 迁移）。
+> **摘要 (Abstract)**: 本文档定义了《前端生死劫》Flutter 版的技术实现标准与状态流转逻辑。核心采用 Flutter + Dart + Riverpod 的组合，实现纯客户端驱动的"状态机游戏"。文档锁定了完整的状态模型（v2.0.0，含技能系统、状态条件、连选惩罚等扩展）、游戏循环状态机（含打断/压力事件/周度复盘流程）、结局判定算法、事件抽取算法及存档架构，确保 AI 在生成功能逻辑时遵循统一的单向数据流与边界检查规则。最后更新：2026-05-31（版本更新）。
 
 
 ## 1. 技术栈选型 (Technology Stack)
@@ -52,7 +52,7 @@ class GameState {
   final List<LogEntry> logs;         // 终端日志队列
 
   // 存档元数据
-  final String version;              // "1.3.0"
+  final String version;              // "2.0.0"
   final int savedAt;                 // DateTime.now().millisecondsSinceEpoch
   final ActionStats actionStats;     // 玩家行动历史统计
 

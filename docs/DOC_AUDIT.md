@@ -588,7 +588,7 @@
 
 **Current canonical facts**:
 - Android launcher name is `Frontend Survival`; launcher icons are generated from `tmp_icon/icon.png` into `android/app/src/main/res/mipmap-*`.
-- Runtime version is `1.3.0+1`; `GameState.gameVersion` remains `1.3.0`.
+- Runtime version is `2.0.0+2`; `GameState.gameVersion` is `2.0.0`.
 - `GameState` has 24 fields, including transient non-serialized `showIntroVideo`.
 - `GameData.init()` loads 10 JSON data files and preloads 8 background PNGs, including `assets/backgrounds/QTE.png`.
 - `assets/data/events.json` contains 65 events, including 14 high-risk events and 5 QTE events (`EV_061`-`EV_065`).

@@ -4,6 +4,14 @@
 
 赛博朋克终端 HUD、打字机叙事、随机职场事件、技能树、QTE 小游戏和五种结局，组成一场有点荒诞、也有点真实的职场求生模拟。
 
+## 下载 APK
+
+可以在 GitHub Releases 页面下载最新 APK：
+
+[Download latest release](https://github.com/yyty947/vibe2_flutter/releases/latest)
+
+如果不确定设备架构，下载 `universal` APK；如果想要更小体积，优先选择 `arm64-v8a`。
+
 ## 游戏目标
 
 在 Day 1 到 Day 30 之间活下来，并尽量拿到更好的结局。

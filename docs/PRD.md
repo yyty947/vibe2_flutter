@@ -1,7 +1,7 @@
 # 产品需求文档 (PRD)：《前端生死劫：优化倒计时 30 天》
 
 **最后更新：** 2026-05-03（Flutter 迁移适配）
-**状态：** 正式版 (v1.3.0) — Flutter 版功能对齐
+**状态：** 正式版 (v2.0.0) — Flutter 版功能对齐
 **关联文档：** [DOC_AUDIT.md](./DOC_AUDIT.md), [TECH_ARCH.md](./TECH_ARCH.md), [UI_DESIGN_SYSTEM.md](./UI_DESIGN_SYSTEM.md), [GAME_CONTENT.md](./GAME_CONTENT.md), [MIGRATION_PLAN.md](./MIGRATION_PLAN.md)
 
 ---
@@ -540,7 +540,7 @@ Day N 开始 → 显示开场白 → 上午行动 → 下午行动 → 触发随
 This section is authoritative for the current shipped Flutter behavior and supersedes older historical wording elsewhere in this PRD.
 
 - Product/platform: Android Flutter game, landscape only, pure client-side. Launcher label is `Frontend Survival`.
-- Version: app package version is `1.3.0+1`; save compatibility version is `GameState.gameVersion == 1.3.0`.
+- Version: app package version is `2.0.0+2`; save compatibility version is `GameState.gameVersion == 2.0.0`.
 - Runtime flow: NEW GAME shows the full-screen intro video first; CONTINUE skips the video and enters the saved `OPENING` phase.
 - State model: current `GameState` has 24 fields. `showIntroVideo` is transient UI state and is not serialized.
 - Static content scale: 12 actions, 65 events, 14 high-risk events, 5 QTE events, 30 openings, and 5 endings.
