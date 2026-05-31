@@ -131,7 +131,7 @@
 - **两阶段演出**:
   1. Glitch 阶段: `_GlitchPhase` — magenta + cyan 双色 `Shadow` + `CRASH_DUMP_` 随机地址
   2. Reveal 阶段: `_RevealPhase` — 渐入结局标题/正文 + 生存报告 + `[ RESTART ]`
-- 结局图标: `LucideIcons.skull`(BE_DEATH), `LucideIcons.doorOpen`(BE_FIRED), `LucideIcons.rocket`(GE_OFFER), `LucideIcons.bird`(NE_PEACE), `LucideIcons.crown`(HE_KING)
+- 结局图标: `LucideIcons.skull`(BE_DEATH), `LucideIcons.doorOpen`(BE_FIRED), `LucideIcons.rocket`(GE_OFFER), `LucideIcons.checkCircle`(NE_PEACE), `LucideIcons.crown`(HE_KING)
 - 背景氛围: Bad Ending `RadialGradient` 红色，Good Ending 绿色
 
 ## 6. 动画与特效 (Vibe & Feedback)
